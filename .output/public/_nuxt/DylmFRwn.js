@@ -1,1 +1,0 @@
-import{_ as o,c as s,o as r,av as t}from"./DUQeYSlU.js";const n={};function a(e,c){return r(),s("tbody",null,[t(e.$slots,"default")])}const l=Object.assign(o(n,[["render",a]]),{__name:"ProseTbody"});export{l as default};

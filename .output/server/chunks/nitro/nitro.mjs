@@ -1230,6 +1230,7 @@ function appendResponseHeader(event, name, value) {
   }
   event.node.res.setHeader(name, [...current, value]);
 }
+const appendHeader = appendResponseHeader;
 function removeResponseHeader(event, name) {
   return event.node.res.removeHeader(name);
 }
@@ -4317,7 +4318,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "17552a09-6597-4f85-a5ec-a0cef970f5e9",
+    "buildId": "a47c8482-90a5-42a5-bcd0-0240c84e747c",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4388,6 +4389,10 @@ const _inlineRuntimeConfig = {
       "defaultScriptOptions": {
         "trigger": "onNuxtReady"
       }
+    },
+    "preview": {
+      "api": "https://api.nuxt.studio",
+      "iframeMessagingAllowedOrigins": ""
     }
   },
   "content": {
@@ -4841,600 +4846,663 @@ const plugins = [
 ];
 
 const assets = {
+  "/__preview.json": {
+    "type": "application/json",
+    "etag": "\"745c-5AfzU03v2//TlJlS17u7eGdF8Ps\"",
+    "mtime": "2025-07-20T06:25:35.897Z",
+    "size": 29788,
+    "path": "../public/__preview.json"
+  },
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"10be-n8egyE9tcb7sKGr/pYCaQ4uWqxI\"",
-    "mtime": "2025-07-20T05:29:23.933Z",
+    "mtime": "2025-07-20T06:25:35.933Z",
     "size": 4286,
     "path": "../public/favicon.ico"
   },
   "/hero.png": {
     "type": "image/png",
     "etag": "\"138738-4YBN2jlmA6kyY+qA8RT+Z4s3KYQ\"",
-    "mtime": "2025-07-20T05:29:23.935Z",
+    "mtime": "2025-07-20T06:25:35.936Z",
     "size": 1279800,
     "path": "../public/hero.png"
   },
   "/logo.png": {
     "type": "image/png",
     "etag": "\"e5ddc-ys1WGA8xxxCF8/HhP5UgAOqiJMk\"",
-    "mtime": "2025-07-20T05:29:23.935Z",
+    "mtime": "2025-07-20T06:25:35.935Z",
     "size": 941532,
     "path": "../public/logo.png"
   },
   "/robots.txt": {
     "type": "text/plain; charset=utf-8",
     "etag": "\"18-j8OIsL9qGDmNZ+lHhp2tyH4XtaE\"",
-    "mtime": "2025-07-20T05:29:23.933Z",
+    "mtime": "2025-07-20T06:25:35.933Z",
     "size": 24,
     "path": "../public/robots.txt"
   },
   "/yellowdog-japanese-sticker.png": {
     "type": "image/png",
     "etag": "\"b01e0-G7QvatdE2/dYiVRw9Z/7LXi2yRA\"",
-    "mtime": "2025-07-20T05:29:23.934Z",
+    "mtime": "2025-07-20T06:25:35.935Z",
     "size": 721376,
     "path": "../public/yellowdog-japanese-sticker.png"
   },
   "/yellowdog-sticker.png": {
     "type": "image/png",
     "etag": "\"82b5c-dMejiIrbH5+MOZ1+6M7yXp0enyI\"",
-    "mtime": "2025-07-20T05:29:23.934Z",
+    "mtime": "2025-07-20T06:25:35.935Z",
     "size": 535388,
     "path": "../public/yellowdog-sticker.png"
   },
   "/_fonts/0FzYDfZ36KowU5G19FxQg1kvFIseW_2Z_SrXLtaaNAM-bpCEe_AqX5qsHZAd_sQpoGdQXDpArzOsb_FWvloR5ik.woff2": {
     "type": "font/woff2",
     "etag": "\"22a0-9Tacf5SaYGafNBmAikZD8dMYUGU\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.918Z",
     "size": 8864,
     "path": "../public/_fonts/0FzYDfZ36KowU5G19FxQg1kvFIseW_2Z_SrXLtaaNAM-bpCEe_AqX5qsHZAd_sQpoGdQXDpArzOsb_FWvloR5ik.woff2"
   },
   "/_fonts/0sCScbsxXXdShLwktcf1pjREUdrxz14erwc1QEKkchk-epv6WxIvgVSB0QFO2f57wOIXsAeV7B4Y6QvZSOB7pzg.woff2": {
     "type": "font/woff2",
     "etag": "\"3b0-F14m2I7FA+YoZCchnefvI7a+sWs\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.918Z",
     "size": 944,
     "path": "../public/_fonts/0sCScbsxXXdShLwktcf1pjREUdrxz14erwc1QEKkchk-epv6WxIvgVSB0QFO2f57wOIXsAeV7B4Y6QvZSOB7pzg.woff2"
   },
   "/_fonts/2ggHYVDCbvazc1p0tuDugeS6Wvthvyw03JcDFsTBGjE-BimFcHkRLzR0Yd7npTqIcFfe1_VuLGJ8klzHfwive14.woff": {
     "type": "font/woff",
     "etag": "\"11148-OCbAh6DoAqU4rA2wrOEHVmjW/nY\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.918Z",
     "size": 69960,
     "path": "../public/_fonts/2ggHYVDCbvazc1p0tuDugeS6Wvthvyw03JcDFsTBGjE-BimFcHkRLzR0Yd7npTqIcFfe1_VuLGJ8klzHfwive14.woff"
   },
   "/_fonts/5P_5Z41xLEGDDteOsemplHSmRxes4VnlpddlSEc7Me8-PZ8Zsb9003H5Xa7TRxWiUCExcuZlRIJ1V_LKeRb-IJk.woff2": {
     "type": "font/woff2",
     "etag": "\"393c-7nBPNiRtU+Wd7oMGeZ/B7vABITM\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 14652,
     "path": "../public/_fonts/5P_5Z41xLEGDDteOsemplHSmRxes4VnlpddlSEc7Me8-PZ8Zsb9003H5Xa7TRxWiUCExcuZlRIJ1V_LKeRb-IJk.woff2"
   },
   "/_fonts/6llTmTU4VrhnOXxlpEAJxgTPn5R5jxwpdC8Vv1GiM6A-xrg8f2o182XUsVm7hYQCa5WI9Jlv1QQ2lrYEm9Pwe3M.woff2": {
     "type": "font/woff2",
     "etag": "\"3b2c-An4HjmO/XQtP3m3kah3cNE4t1rk\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.918Z",
     "size": 15148,
     "path": "../public/_fonts/6llTmTU4VrhnOXxlpEAJxgTPn5R5jxwpdC8Vv1GiM6A-xrg8f2o182XUsVm7hYQCa5WI9Jlv1QQ2lrYEm9Pwe3M.woff2"
   },
   "/_fonts/KjSeTzVQ_IZ_hGs2L2Za4Qh_YSxyKdO1JcSuJHk8YUE-oTw4Lt8QfccM3_sZDTPdMYSx1CvJcTJdO7pWkNVNys0.woff2": {
     "type": "font/woff2",
     "etag": "\"3498-LpFPACrAQoPTqcBgPV8Oj/U19r8\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 13464,
     "path": "../public/_fonts/KjSeTzVQ_IZ_hGs2L2Za4Qh_YSxyKdO1JcSuJHk8YUE-oTw4Lt8QfccM3_sZDTPdMYSx1CvJcTJdO7pWkNVNys0.woff2"
   },
   "/_fonts/Q3S_p5LT4oiqlER2BJCNik5cex_IJKLzuE43EAJyEQI-sX9yPbLyiLNPe8rvdUae_litInf-OBs7orG-c9dZwd0.woff2": {
     "type": "font/woff2",
     "etag": "\"ff8-sJ/5bIX3SM9eR5QPRvgkAIrzTOk\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 4088,
     "path": "../public/_fonts/Q3S_p5LT4oiqlER2BJCNik5cex_IJKLzuE43EAJyEQI-sX9yPbLyiLNPe8rvdUae_litInf-OBs7orG-c9dZwd0.woff2"
   },
   "/_fonts/SMlUA33CCqtZ9XHHI96jSnJe6CdDhbcmXCs-jYdC2AE-_YC64MiCDZbFJ7Zv9fhDEIvGToMxOf0jqjfpADVnDko.woff2": {
     "type": "font/woff2",
     "etag": "\"1e54-75pCpFRb8wOIzXFERfrfzLS1AMY\"",
-    "mtime": "2025-07-20T05:29:23.912Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 7764,
     "path": "../public/_fonts/SMlUA33CCqtZ9XHHI96jSnJe6CdDhbcmXCs-jYdC2AE-_YC64MiCDZbFJ7Zv9fhDEIvGToMxOf0jqjfpADVnDko.woff2"
   },
   "/_fonts/SVyAGW3UKufF57edQ7AdnfCxoCdiPRdVBxo9MqVSOps-PDM3pGci8IAJK75EFoLKUOfJzK4OxuflUjipaiz1FC4.woff2": {
     "type": "font/woff2",
     "etag": "\"118c-/g8epMNofKnLW7e/h/ll/LlSWAo\"",
-    "mtime": "2025-07-20T05:29:23.913Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 4492,
     "path": "../public/_fonts/SVyAGW3UKufF57edQ7AdnfCxoCdiPRdVBxo9MqVSOps-PDM3pGci8IAJK75EFoLKUOfJzK4OxuflUjipaiz1FC4.woff2"
   },
   "/_fonts/T5WnJxZrt4ihPoH6Q43jCfO-aswzYfJYp8ElqLrEWK4-I1bkeBCrbxan9rBHz2Io_oNooGcLlUL7Duequyu8ND4.woff2": {
     "type": "font/woff2",
     "etag": "\"1a9c-H5p2l3YQPrvKIna0DfDs89pjf2E\"",
-    "mtime": "2025-07-20T05:29:23.913Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 6812,
     "path": "../public/_fonts/T5WnJxZrt4ihPoH6Q43jCfO-aswzYfJYp8ElqLrEWK4-I1bkeBCrbxan9rBHz2Io_oNooGcLlUL7Duequyu8ND4.woff2"
   },
   "/_fonts/Vjl-fJAKMBVPq121v8WukUZE73L_FXIdIfjvGYg2Qyg-uJw0V4LticFfP_o7CWI2C57hfYQehGgUZzM_MdOJJwY.woff2": {
     "type": "font/woff2",
     "etag": "\"1e50-+HkGqQbUbs9sTxqhH3Y0KODPcbQ\"",
-    "mtime": "2025-07-20T05:29:23.913Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 7760,
     "path": "../public/_fonts/Vjl-fJAKMBVPq121v8WukUZE73L_FXIdIfjvGYg2Qyg-uJw0V4LticFfP_o7CWI2C57hfYQehGgUZzM_MdOJJwY.woff2"
   },
   "/_fonts/kjjsrhGeTlLIKHsN73NvO-yQkSGJQgKaVnxVD9lWzDw-jOiG1K7zGkecqwMnC2M2lbEOJGjDhHURZvVEdyHLZy0.woff2": {
     "type": "font/woff2",
     "etag": "\"3c0-/aucDX6izEzEork+MMvMISWdOTQ\"",
-    "mtime": "2025-07-20T05:29:23.913Z",
+    "mtime": "2025-07-20T06:25:35.919Z",
     "size": 960,
     "path": "../public/_fonts/kjjsrhGeTlLIKHsN73NvO-yQkSGJQgKaVnxVD9lWzDw-jOiG1K7zGkecqwMnC2M2lbEOJGjDhHURZvVEdyHLZy0.woff2"
   },
   "/_fonts/mwlhD5H6OOXI9ap8JPS8xwWpcKnRJZF0fT1XPlp6pFk-OVi_BBDyFx1NE1Kd7C3h_jKGCQ06w09DVemN0BtDdwE.woff2": {
     "type": "font/woff2",
     "etag": "\"3f90-M03RXarJrh79X3hpIvchlwWR6Sw\"",
-    "mtime": "2025-07-20T05:29:23.913Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 16272,
     "path": "../public/_fonts/mwlhD5H6OOXI9ap8JPS8xwWpcKnRJZF0fT1XPlp6pFk-OVi_BBDyFx1NE1Kd7C3h_jKGCQ06w09DVemN0BtDdwE.woff2"
   },
   "/_fonts/pogFDrya8qre9JJB-wSYbICQJ291LgeDXxEnGx5JkxY-5HYBver0bkibg5A3cXXSqYxPB2y7PE8pxOiGVBGcwfE.woff2": {
     "type": "font/woff2",
     "etag": "\"176c-UuSgDrlf9lWHF7QW7IXj2oZo2K0\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 5996,
     "path": "../public/_fonts/pogFDrya8qre9JJB-wSYbICQJ291LgeDXxEnGx5JkxY-5HYBver0bkibg5A3cXXSqYxPB2y7PE8pxOiGVBGcwfE.woff2"
   },
   "/_fonts/q0X4ip5ELKnHS9z4cPzQiCpA1NmsCi5q5Vw-zduUXEs-Mrt_E5FeD3P-klCrA8c7005HfdFrjCgXCi1AaKoANYg.woff2": {
     "type": "font/woff2",
     "etag": "\"4218-pmqUXhwqaIe4U7RKJsWZ+qsVEfU\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 16920,
     "path": "../public/_fonts/q0X4ip5ELKnHS9z4cPzQiCpA1NmsCi5q5Vw-zduUXEs-Mrt_E5FeD3P-klCrA8c7005HfdFrjCgXCi1AaKoANYg.woff2"
   },
   "/_fonts/sfMudhGcaO8gHDgUczDDQmGM9FUNACG22fCmZsXLeTM-HdWeDafuMrUn5Jo3XgudiMxEhUxrjlWrB4iZV2ADpvE.woff2": {
     "type": "font/woff2",
     "etag": "\"2e44-S/ELuSP99WwyE8hSawD4Rc606B8\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 11844,
     "path": "../public/_fonts/sfMudhGcaO8gHDgUczDDQmGM9FUNACG22fCmZsXLeTM-HdWeDafuMrUn5Jo3XgudiMxEhUxrjlWrB4iZV2ADpvE.woff2"
   },
   "/_fonts/t3VrpG2lZdfez1sg9pmH4FP873bJSlWM1tgwh2YdOv8-HQXNOURc_bNScEb4M9WFfXJgZkM14V0Gi7lZ7lnp5p8.woff2": {
     "type": "font/woff2",
     "etag": "\"21c4-04vCvs/KCJbIxBRTKFuKzD8d7Ds\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 8644,
     "path": "../public/_fonts/t3VrpG2lZdfez1sg9pmH4FP873bJSlWM1tgwh2YdOv8-HQXNOURc_bNScEb4M9WFfXJgZkM14V0Gi7lZ7lnp5p8.woff2"
   },
   "/_fonts/u7UmSpWfMG8qyoetp4u4S8U9LMAg2Zt4XZ_wIsuFZUc-UW8nVcVeibjx8LVy19hxoBizlMmGWBdYJV3_Hm45fhE.woff2": {
     "type": "font/woff2",
     "etag": "\"1974-qLK0cQvIDigoIXmABLOPRShTLFg\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 6516,
     "path": "../public/_fonts/u7UmSpWfMG8qyoetp4u4S8U9LMAg2Zt4XZ_wIsuFZUc-UW8nVcVeibjx8LVy19hxoBizlMmGWBdYJV3_Hm45fhE.woff2"
   },
   "/_fonts/vnQZnmLlmpY-pqaK1sw-5k1yglIzMRwM4FHhSfsrdI-lWW3H9OP5DLwE2jz402hLNynq_K2GAyX140IPiQOgKg.woff2": {
     "type": "font/woff2",
     "etag": "\"2640-G4MWiu49UJILGSaOfGVumjfpw+U\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 9792,
     "path": "../public/_fonts/vnQZnmLlmpY-pqaK1sw-5k1yglIzMRwM4FHhSfsrdI-lWW3H9OP5DLwE2jz402hLNynq_K2GAyX140IPiQOgKg.woff2"
   },
   "/_fonts/w6IyUMb7I-Yy2vbAlgUry4sKIBOdeyt3qoKc4MDVQ-c-gYSQlxs2JcjVQuVG7odfzGqJAn45FJrHqp0Fgf_Xn8s.woff": {
     "type": "font/woff",
     "etag": "\"fb8c-iRQsZj9FWKGOfSGrDu0T4PRYK+Y\"",
-    "mtime": "2025-07-20T05:29:23.914Z",
+    "mtime": "2025-07-20T06:25:35.920Z",
     "size": 64396,
     "path": "../public/_fonts/w6IyUMb7I-Yy2vbAlgUry4sKIBOdeyt3qoKc4MDVQ-c-gYSQlxs2JcjVQuVG7odfzGqJAn45FJrHqp0Fgf_Xn8s.woff"
   },
-  "/_nuxt/2f8Lajm4.js": {
+  "/_nuxt/3Q2S2otr.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"244-yB62DbINiDu5lt/qkaFeGnGPGoc\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 580,
-    "path": "../public/_nuxt/2f8Lajm4.js"
+    "etag": "\"d7-MmLGH3t19FMVpKXJtIGkV3Lob70\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 215,
+    "path": "../public/_nuxt/3Q2S2otr.js"
   },
-  "/_nuxt/2gGieecj.js": {
+  "/_nuxt/4gXAfq6l.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1cc-6BMedN/f++fwnIh7TjVEhaoOFb0\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 460,
-    "path": "../public/_nuxt/2gGieecj.js"
-  },
-  "/_nuxt/AR8JAecu.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"ece-Q0hkjgZ+2RVKgjHFuK3L/NU3Tlk\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 3790,
-    "path": "../public/_nuxt/AR8JAecu.js"
-  },
-  "/_nuxt/B2QXfG8g.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"457-yLXhwSeGcKWCMWrkEPYrORnRdn8\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 1111,
-    "path": "../public/_nuxt/B2QXfG8g.js"
-  },
-  "/_nuxt/BW6Fg80l.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d8-js5e42dhkqCins6KcosHotJXRfw\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 216,
-    "path": "../public/_nuxt/BW6Fg80l.js"
-  },
-  "/_nuxt/BWta_4V5.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"a6d-VLErhATwewLugAiI2UtMszNpcOI\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 2669,
-    "path": "../public/_nuxt/BWta_4V5.js"
-  },
-  "/_nuxt/BdJYl-DV.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"17c-qtVJo6UgvjZx4U+fJu4PIbntIlQ\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 380,
-    "path": "../public/_nuxt/BdJYl-DV.js"
-  },
-  "/_nuxt/BeLjAaoa.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"df-8v7VbVLFzZiaL0WZ1USMxPqbdPs\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
+    "etag": "\"df-UvMZSA2/PtGyLTs8jNTbpY1iiz8\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 223,
-    "path": "../public/_nuxt/BeLjAaoa.js"
+    "path": "../public/_nuxt/4gXAfq6l.js"
   },
-  "/_nuxt/BiH571t-.js": {
+  "/_nuxt/B0y0EovK.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-NwMC9WY+moRuV8tZIE40CduMoEk\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
+    "etag": "\"1aa8-TaFXjjPC3HXFIT2OtebmlsPYumw\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 6824,
+    "path": "../public/_nuxt/B0y0EovK.js"
+  },
+  "/_nuxt/B2o0hulM.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d8b-XekBfhgq1/dqLre4jE32rW/EGIs\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 3467,
+    "path": "../public/_nuxt/B2o0hulM.js"
+  },
+  "/_nuxt/B766HRv4.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d7-4m5rfsaVBbgaazdiu5roWDgbBLo\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 215,
-    "path": "../public/_nuxt/BiH571t-.js"
+    "path": "../public/_nuxt/B766HRv4.js"
   },
-  "/_nuxt/BiVn55Qu.js": {
+  "/_nuxt/B7AknlF8.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1e20-i8tfjBfkW+f4POLQ99tUKMzEyeg\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 7712,
-    "path": "../public/_nuxt/BiVn55Qu.js"
+    "etag": "\"1f1-RSb6Scni9iYF1DQQ/jQtmvlgzG0\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 497,
+    "path": "../public/_nuxt/B7AknlF8.js"
   },
-  "/_nuxt/BjYLNs1Z.js": {
+  "/_nuxt/BIZgvp3u.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"d5-ldhFpYAWt88Dfr01U4+LEjcgJ1Q\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
+    "etag": "\"d5-vJnvh9n9uSZ4/ZzlDzsvmYuwANY\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 213,
-    "path": "../public/_nuxt/BjYLNs1Z.js"
+    "path": "../public/_nuxt/BIZgvp3u.js"
   },
-  "/_nuxt/Bp8NyskK.js": {
+  "/_nuxt/BJQuyT6T.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"d2-TKKWqTSPRyy+wSDyQ8J95sA+Kqk\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 210,
-    "path": "../public/_nuxt/Bp8NyskK.js"
+    "etag": "\"1f1-dxb/SF64zpVCGi2j+4Ycg7g96kU\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 497,
+    "path": "../public/_nuxt/BJQuyT6T.js"
   },
-  "/_nuxt/BqFN91rT.js": {
+  "/_nuxt/BQtkOZV4.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"22d4-khdidnGHPX9eZ+tBBmLq4P2j7WQ\"",
-    "mtime": "2025-07-20T05:29:23.924Z",
-    "size": 8916,
-    "path": "../public/_nuxt/BqFN91rT.js"
+    "etag": "\"ece-VNdxflN3nfTD7JFbdFS01lvGaJc\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 3790,
+    "path": "../public/_nuxt/BQtkOZV4.js"
   },
-  "/_nuxt/C7JUUmK-.js": {
+  "/_nuxt/BSew6HiY.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1ac-OF4OS8UuCVAAu/WS0IHV0LyFbwo\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 428,
-    "path": "../public/_nuxt/C7JUUmK-.js"
+    "etag": "\"273-yp6fJd61MKEoyIwPMAb+WxNGbS8\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 627,
+    "path": "../public/_nuxt/BSew6HiY.js"
   },
-  "/_nuxt/C9dYzQBr.js": {
+  "/_nuxt/BWea8pOb.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1f2-CFSsDue7/8wnYXpLexbVZYIyhKk\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 498,
-    "path": "../public/_nuxt/C9dYzQBr.js"
+    "etag": "\"472-DpnU4hNQzdZjRV+ybCyxzi9tsXE\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 1138,
+    "path": "../public/_nuxt/BWea8pOb.js"
   },
-  "/_nuxt/CE8tbK7v.js": {
+  "/_nuxt/BY3F6NbL.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1f2-nNfvrAb0OkcYWEczeKLd8nyazb8\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 498,
-    "path": "../public/_nuxt/CE8tbK7v.js"
-  },
-  "/_nuxt/CEkYvnVv.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"db-q1bfDmaY+rp4B3tx1+pU5vGM66Q\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 219,
-    "path": "../public/_nuxt/CEkYvnVv.js"
-  },
-  "/_nuxt/CEspBadx.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"ad36-d2bBQKqgVXIJdc/qkgnhveUV/l8\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 44342,
-    "path": "../public/_nuxt/CEspBadx.js"
-  },
-  "/_nuxt/CHmRTZAd.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1f2-Rix3QBjbm+dfHMoMKuSi7ChRjL8\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 498,
-    "path": "../public/_nuxt/CHmRTZAd.js"
-  },
-  "/_nuxt/CJq6uJEJ.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1ec-boRuc09hwHVB/RcycE463ZmGayE\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 492,
-    "path": "../public/_nuxt/CJq6uJEJ.js"
-  },
-  "/_nuxt/CUOtmT69.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"a034-hw8av5jEqynvewAjmMBmx095LHo\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 41012,
-    "path": "../public/_nuxt/CUOtmT69.js"
-  },
-  "/_nuxt/C_B7DNex.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"b2-W3CSqxSYtMu0tPEZ5l+ZKW5lw5E\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 178,
-    "path": "../public/_nuxt/C_B7DNex.js"
-  },
-  "/_nuxt/Ccb9lpKq.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1f2-8WTiV6LbTsvu0QrXuM62K951/l4\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 498,
-    "path": "../public/_nuxt/Ccb9lpKq.js"
-  },
-  "/_nuxt/CeZXh5Yz.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"e7-Vp5WssnIM2DsUjw1qlXc38ca60k\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 231,
-    "path": "../public/_nuxt/CeZXh5Yz.js"
-  },
-  "/_nuxt/CfMoeDJb.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d8-Z3TcPRxc8OhSq13y1Et9W14fEuU\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 216,
-    "path": "../public/_nuxt/CfMoeDJb.js"
-  },
-  "/_nuxt/Cqj1Li6F.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d90-b6TIg/8R2QYANX6VFK2VxSiHnXo\"",
-    "mtime": "2025-07-20T05:29:23.925Z",
-    "size": 3472,
-    "path": "../public/_nuxt/Cqj1Li6F.js"
-  },
-  "/_nuxt/D-zOJBWv.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-pBnbxcDRIMohDtfN4G5kpmZcag8\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
+    "etag": "\"d7-3GgRm/+Tp3pu+aFka7I+TDfnhlc\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 215,
-    "path": "../public/_nuxt/D-zOJBWv.js"
+    "path": "../public/_nuxt/BY3F6NbL.js"
   },
-  "/_nuxt/D1VkAc-Y.js": {
+  "/_nuxt/BdRP_pMS.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"13ff-TwiPsdwqlteorSK4rlneG86byFA\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 5119,
-    "path": "../public/_nuxt/D1VkAc-Y.js"
-  },
-  "/_nuxt/DCa9d6gp.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"9607-mYwqCW9cmRMJRSti/EXJU/k8HE0\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 38407,
-    "path": "../public/_nuxt/DCa9d6gp.js"
-  },
-  "/_nuxt/DD54I0Jk.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"271-XCBQt9NbyWC1TCPqoGDCbkKNnZc\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 625,
-    "path": "../public/_nuxt/DD54I0Jk.js"
-  },
-  "/_nuxt/DEi7vyMA.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-H40OaPkJkx78M3sTKkOjByS7wyg\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
+    "etag": "\"d7-ww+amCJiHgbc6OVRsWHwwW92hic\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 215,
-    "path": "../public/_nuxt/DEi7vyMA.js"
+    "path": "../public/_nuxt/BdRP_pMS.js"
   },
-  "/_nuxt/DH_JTrNe.js": {
+  "/_nuxt/Bevpobgv.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"245-w2P4qF/3VQVunlnNDn0YaSwz9SU\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 581,
-    "path": "../public/_nuxt/DH_JTrNe.js"
-  },
-  "/_nuxt/DIcnIKcr.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-U7jYr3Tz2bDDwrY3Du8bb/SGNjQ\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 215,
-    "path": "../public/_nuxt/DIcnIKcr.js"
-  },
-  "/_nuxt/DJoi9TXR.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-7cZYUOAljASvcyJaMoamF8gheHU\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 215,
-    "path": "../public/_nuxt/DJoi9TXR.js"
-  },
-  "/_nuxt/DUQeYSlU.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"3c556-W2jnhiblyr+ak8mS6xySuE4tNWU\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
-    "size": 247126,
-    "path": "../public/_nuxt/DUQeYSlU.js"
-  },
-  "/_nuxt/DqsfVnIt.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"245-eD0vbu8b3ZvwBaFdM1JbHDKjXNs\"",
-    "mtime": "2025-07-20T05:29:23.926Z",
-    "size": 581,
-    "path": "../public/_nuxt/DqsfVnIt.js"
-  },
-  "/_nuxt/DylmFRwn.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"dd-eVJueirygIfZZCxQG0ZvziElFrg\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
+    "etag": "\"dd-5YS4Z9oKHPjHYwMN0uRF9tbDqCo\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
     "size": 221,
-    "path": "../public/_nuxt/DylmFRwn.js"
+    "path": "../public/_nuxt/Bevpobgv.js"
   },
-  "/_nuxt/Dz4stDFg.js": {
+  "/_nuxt/Bg7tiVHB.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"19a-o8DbSQDegzyTyCAJ99aRg0ISEUo\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
+    "etag": "\"1eb-cRpx23PG6Yj4RUNLbBTxSnY3Iz0\"",
+    "mtime": "2025-07-20T06:25:35.926Z",
+    "size": 491,
+    "path": "../public/_nuxt/Bg7tiVHB.js"
+  },
+  "/_nuxt/BlRhkrN0.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"a4ea-BHR2813XTCRhrRq9HCBN84rw8Vs\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 42218,
+    "path": "../public/_nuxt/BlRhkrN0.js"
+  },
+  "/_nuxt/C62unUd1.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1e1e-g+2zjtduieO1VY+woeEY511nfM8\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 7710,
+    "path": "../public/_nuxt/C62unUd1.js"
+  },
+  "/_nuxt/CE3Ohiqi.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d9f6-XZrKi+cIzbEeDFtCLjmYGE78CKM\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 55798,
+    "path": "../public/_nuxt/CE3Ohiqi.js"
+  },
+  "/_nuxt/CJSHZYr5.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"a04e-GVqCN33+dyrimBAklExmt2T4wyo\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 41038,
+    "path": "../public/_nuxt/CJSHZYr5.js"
+  },
+  "/_nuxt/CKkJmIW1.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"22d0-5lfKC0ADwBVbz5kybJuVp+wF7kM\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 8912,
+    "path": "../public/_nuxt/CKkJmIW1.js"
+  },
+  "/_nuxt/CO8vv6XH.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"b28-LMoiCDkVfLyduZGFo28HrnKrm/g\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 2856,
+    "path": "../public/_nuxt/CO8vv6XH.js"
+  },
+  "/_nuxt/CQlaMVPA.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"bb01-zX4OJSUsFV/Fm4rgbZBp2eqFEIc\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 47873,
+    "path": "../public/_nuxt/CQlaMVPA.js"
+  },
+  "/_nuxt/CROIPsSQ.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1faa-AL45oJkSfZXksEQQjwDY5M/6XNo\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 8106,
+    "path": "../public/_nuxt/CROIPsSQ.js"
+  },
+  "/_nuxt/CfeC9zBQ.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"30c51-G7eA1mt9Cxs2oK7rFIo5yUVLqb4\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 199761,
+    "path": "../public/_nuxt/CfeC9zBQ.js"
+  },
+  "/_nuxt/CkKu7oFl.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"17c-BUk5F9MMJ4jEifjjj4DBj7hLUCs\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 380,
+    "path": "../public/_nuxt/CkKu7oFl.js"
+  },
+  "/_nuxt/ContentHero.m0lk1DtE.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"65-lV9tMtUSixQ9v0TgDQKEOTi8v/c\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 101,
+    "path": "../public/_nuxt/ContentHero.m0lk1DtE.css"
+  },
+  "/_nuxt/Cp4iA-LQ.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d7-gr3ZDWsPuileXaYYB+nsjVwg+Gc\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 215,
+    "path": "../public/_nuxt/Cp4iA-LQ.js"
+  },
+  "/_nuxt/Cpfds7MG.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"a6c-AxPkP5JS6nI7CXrNxems3HwerH0\"",
+    "mtime": "2025-07-20T06:25:35.927Z",
+    "size": 2668,
+    "path": "../public/_nuxt/Cpfds7MG.js"
+  },
+  "/_nuxt/CqSSV0Xc.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"8e62-49IADCh43wLVLa1bntEQGbqo2pI\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 36450,
+    "path": "../public/_nuxt/CqSSV0Xc.js"
+  },
+  "/_nuxt/CtwihnKy.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"19a-lHQFBfpVIa/XrrxtRMo0i8Z7YUY\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
     "size": 410,
-    "path": "../public/_nuxt/Dz4stDFg.js"
+    "path": "../public/_nuxt/CtwihnKy.js"
+  },
+  "/_nuxt/D1s-FLFI.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"b2-NCQ1EPTd68kk3yT/Nc95Knj2hHI\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 178,
+    "path": "../public/_nuxt/D1s-FLFI.js"
+  },
+  "/_nuxt/D9sK-TVl.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"279-e7+Pfbfo3qSCWbOWNtB34UPAVIw\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 633,
+    "path": "../public/_nuxt/D9sK-TVl.js"
+  },
+  "/_nuxt/DBLyUT5V.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"25f-SaUxlLAifh34ANxODeHXJxWMCQI\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 607,
+    "path": "../public/_nuxt/DBLyUT5V.js"
+  },
+  "/_nuxt/DJKY9BWs.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"db-ygamoLCsDfbgxngFs71elfYiLh0\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 219,
+    "path": "../public/_nuxt/DJKY9BWs.js"
+  },
+  "/_nuxt/DLqkKrpU.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"474-tLdK1P6kabS6rOol1Msf0UJYHsA\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 1140,
+    "path": "../public/_nuxt/DLqkKrpU.js"
+  },
+  "/_nuxt/DSrUdBcS.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1f1-wNZ0y1+agaOqw4+lJ6IodVcNvWU\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 497,
+    "path": "../public/_nuxt/DSrUdBcS.js"
+  },
+  "/_nuxt/DtX0Rh3a.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1f1-Qnl2Mps7/OEtY79yBH+jtgSddBA\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 497,
+    "path": "../public/_nuxt/DtX0Rh3a.js"
+  },
+  "/_nuxt/Dtrm_731.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"260-J88fSD0uayh0/NiGLbTb/2L6mds\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 608,
+    "path": "../public/_nuxt/Dtrm_731.js"
+  },
+  "/_nuxt/DywSVAwC.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"e7-M+OStpbaN/270axIu9Vn2e0hpI0\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 231,
+    "path": "../public/_nuxt/DywSVAwC.js"
+  },
+  "/_nuxt/OBj4ZPOX.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"260-RIxOGpANMHU8mPB50vqtiGAO1dI\"",
+    "mtime": "2025-07-20T06:25:35.928Z",
+    "size": 608,
+    "path": "../public/_nuxt/OBj4ZPOX.js"
   },
   "/_nuxt/ProsePre.D5orA6B_.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"1e-jczvRAVUXbzGL6yotozKFbyMO4s\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
+    "mtime": "2025-07-20T06:25:35.928Z",
     "size": 30,
     "path": "../public/_nuxt/ProsePre.D5orA6B_.css"
+  },
+  "/_nuxt/VAvatar.Oz8UiSQ_.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"5d1d-S+LEHorT7vyyn0ZdWZt9QMVfMMM\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
+    "size": 23837,
+    "path": "../public/_nuxt/VAvatar.Oz8UiSQ_.css"
   },
   "/_nuxt/VContainer.D0S0a0cH.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"2541-tmtX0/5zNIAF9o+LeBGWWhWESKI\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 9537,
     "path": "../public/_nuxt/VContainer.D0S0a0cH.css"
-  },
-  "/_nuxt/YkPWPeVT.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"30c51-AKMBZ/Ib17YMNdRd/w9Tf4DhWko\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
-    "size": 199761,
-    "path": "../public/_nuxt/YkPWPeVT.js"
-  },
-  "/_nuxt/_WmHBJdV.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"dc00-jEEWrA5Q+iSEKmaiFHst0yuKcws\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
-    "size": 56320,
-    "path": "../public/_nuxt/_WmHBJdV.js"
-  },
-  "/_nuxt/_tq3pajC.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"477-mxGNkJ9A4cqDfpAnM5qeYbUQhCY\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
-    "size": 1143,
-    "path": "../public/_nuxt/_tq3pajC.js"
   },
   "/_nuxt/default.De4WvDTG.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"5302-/9k3e5AEA5/QsnY9rbXJxGCd3bs\"",
-    "mtime": "2025-07-20T05:29:23.927Z",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 21250,
     "path": "../public/_nuxt/default.De4WvDTG.css"
   },
-  "/_nuxt/entry.Blt6NWAo.css": {
+  "/_nuxt/entry.yDaWUrAP.css": {
     "type": "text/css; charset=utf-8",
-    "etag": "\"3f570-MfeyWSq16F83la6tDlJjRb6eafE\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
+    "etag": "\"3f570-dE1Ule8lc9Ezm97yxv7lJznWIAA\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 259440,
-    "path": "../public/_nuxt/entry.Blt6NWAo.css"
+    "path": "../public/_nuxt/entry.yDaWUrAP.css"
   },
   "/_nuxt/error-404.DlVPZ4GE.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"980-mEKr2yDhHmG21upnVXydWBGkQJ0\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 2432,
     "path": "../public/_nuxt/error-404.DlVPZ4GE.css"
   },
   "/_nuxt/error-500.DjyirMQI.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"775-e/ssyla9fMU+TjO0KjMl5vd3xXk\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 1909,
     "path": "../public/_nuxt/error-500.DjyirMQI.css"
+  },
+  "/_nuxt/fHJfdx_x.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1f1-LS65efCRCYs6Qk6K77zZ+ty9sRY\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
+    "size": 497,
+    "path": "../public/_nuxt/fHJfdx_x.js"
+  },
+  "/_nuxt/hF4eu10Q.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"3e75b-/CciqDdggymfe9jEV/tza7l7ZcA\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 255835,
+    "path": "../public/_nuxt/hF4eu10Q.js"
+  },
+  "/_nuxt/hXm-ECnA.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d7-CSfSrRTtnk9a+ZqujkrWwCU24q4\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
+    "size": 215,
+    "path": "../public/_nuxt/hXm-ECnA.js"
+  },
+  "/_nuxt/index.Cg9X1Qt0.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"d9a-fiPcdTMddqPAm+/nTiJfXtT6rl0\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
+    "size": 3482,
+    "path": "../public/_nuxt/index.Cg9X1Qt0.css"
   },
   "/_nuxt/index.D4vqUeKN.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"8a18-F75pBaHQOYDGiGwkzJ+oHuUv+ZQ\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
+    "mtime": "2025-07-20T06:25:35.929Z",
     "size": 35352,
     "path": "../public/_nuxt/index.D4vqUeKN.css"
   },
-  "/_nuxt/index.Oz8UiSQ_.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"5d1d-S+LEHorT7vyyn0ZdWZt9QMVfMMM\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
-    "size": 23837,
-    "path": "../public/_nuxt/index.Oz8UiSQ_.css"
-  },
-  "/_nuxt/oTTtmnqi.js": {
+  "/_nuxt/jbvKrqVS.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1f2-n9q1oV2YSegf+wC4tLw7X9o/Ivw\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
-    "size": 498,
-    "path": "../public/_nuxt/oTTtmnqi.js"
+    "etag": "\"1c6-WI3qbEBfTaNOzgvFGUKuDg/VXHQ\"",
+    "mtime": "2025-07-20T06:25:35.929Z",
+    "size": 454,
+    "path": "../public/_nuxt/jbvKrqVS.js"
+  },
+  "/_nuxt/kA_rOpnZ.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"13fb-HZLyNEmL9bKcdb7zEX+lW3/ouOw\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 5115,
+    "path": "../public/_nuxt/kA_rOpnZ.js"
+  },
+  "/_nuxt/l90F136z.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"7d33-nJ1a4jAKKUwswYO6FNyNYu1P2AE\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 32051,
+    "path": "../public/_nuxt/l90F136z.js"
+  },
+  "/_nuxt/qntWoOmb.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"d7-tyid7UmEnpz1J9/uhn+JW3Le0V4\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 215,
+    "path": "../public/_nuxt/qntWoOmb.js"
+  },
+  "/_nuxt/r8Q1yijY.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1cc-uOd+kNqWcJ2YMLRuAFwCoBQxHmc\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 460,
+    "path": "../public/_nuxt/r8Q1yijY.js"
+  },
+  "/_nuxt/sWOzuj-r.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"dd-r7YWVNkxnHtWSe8J1YUK/+BNxao\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 221,
+    "path": "../public/_nuxt/sWOzuj-r.js"
   },
   "/_nuxt/sqlite3-Ubkxdgq9.wasm": {
     "type": "application/wasm",
     "etag": "\"d0fdc-5aKaKmmJfcV2FnoKyrujK7QY7n8\"",
-    "mtime": "2025-07-20T05:29:23.930Z",
+    "mtime": "2025-07-20T06:25:35.931Z",
     "size": 856028,
     "path": "../public/_nuxt/sqlite3-Ubkxdgq9.wasm"
   },
   "/_nuxt/sqlite3-opfs-async-proxy-C_otN2ZJ.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"24eb-/FBLK7guMdffqRNvJNbJgk4Zwss\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
+    "mtime": "2025-07-20T06:25:35.930Z",
     "size": 9451,
     "path": "../public/_nuxt/sqlite3-opfs-async-proxy-C_otN2ZJ.js"
   },
   "/_nuxt/sqlite3-worker1-bundler-friendly-CmtFRRLP.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"300ff-LhJAnM/0zKk6xrfXChO91RETdFQ\"",
-    "mtime": "2025-07-20T05:29:23.929Z",
+    "mtime": "2025-07-20T06:25:35.931Z",
     "size": 196863,
     "path": "../public/_nuxt/sqlite3-worker1-bundler-friendly-CmtFRRLP.js"
   },
   "/_nuxt/sqlite3.Ubkxdgq9.wasm": {
     "type": "application/wasm",
     "etag": "\"d0fdc-5aKaKmmJfcV2FnoKyrujK7QY7n8\"",
-    "mtime": "2025-07-20T05:29:23.931Z",
+    "mtime": "2025-07-20T06:25:35.931Z",
     "size": 856028,
     "path": "../public/_nuxt/sqlite3.Ubkxdgq9.wasm"
   },
-  "/_nuxt/zP03iVv_.js": {
+  "/_nuxt/uI2K1wqW.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"d7-ifkTi08vehCrK2Imz0yqMhA1OLo\"",
-    "mtime": "2025-07-20T05:29:23.928Z",
-    "size": 215,
-    "path": "../public/_nuxt/zP03iVv_.js"
+    "etag": "\"dd-8DfipByPbiDuKFN08LkPH98b5tc\"",
+    "mtime": "2025-07-20T06:25:35.930Z",
+    "size": 221,
+    "path": "../public/_nuxt/uI2K1wqW.js"
   },
   "/__nuxt_content/landing/sql_dump.txt": {
     "type": "text/plain; charset=utf-8",
-    "etag": "\"408-mVqWx3ebBp/FEkQIk2PtBHZu2NY\"",
-    "mtime": "2025-07-20T05:29:23.149Z",
-    "size": 1032,
+    "etag": "\"5cc-jaPUOtOX8mCgzNBHGRngzLWe0FM\"",
+    "mtime": "2025-07-20T06:25:35.897Z",
+    "size": 1484,
     "path": "../public/__nuxt_content/landing/sql_dump.txt"
   },
   "/__nuxt_content/posts/sql_dump.txt": {
     "type": "text/plain; charset=utf-8",
-    "etag": "\"27c-hPScsB0RkBF0xz8XXy2nL2snjqA\"",
-    "mtime": "2025-07-20T05:29:23.149Z",
-    "size": 636,
+    "etag": "\"3c0-8demTMRSV/CPyNtqfl8XNVFok7U\"",
+    "mtime": "2025-07-20T06:25:35.897Z",
+    "size": 960,
     "path": "../public/__nuxt_content/posts/sql_dump.txt"
   },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-2u+5qdXTOhig/PkTS+7M+dU1y60\"",
-    "mtime": "2025-07-20T05:29:23.908Z",
+    "etag": "\"47-3VZuqEXGtNpuDbGxNti95UvOnjo\"",
+    "mtime": "2025-07-20T06:25:35.916Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/builds/meta/17552a09-6597-4f85-a5ec-a0cef970f5e9.json": {
+  "/_nuxt/builds/meta/a47c8482-90a5-42a5-bcd0-0240c84e747c.json": {
     "type": "application/json",
-    "etag": "\"fc-38TSsAAZDSnml7CVHW3fBd7fYXc\"",
-    "mtime": "2025-07-20T05:29:23.907Z",
+    "etag": "\"fc-eankuUOsjonWJqdPJxrv/NZ5xDg\"",
+    "mtime": "2025-07-20T06:25:35.914Z",
     "size": 252,
-    "path": "../public/_nuxt/builds/meta/17552a09-6597-4f85-a5ec-a0cef970f5e9.json"
+    "path": "../public/_nuxt/builds/meta/a47c8482-90a5-42a5-bcd0-0240c84e747c.json"
   }
 };
 
@@ -5695,8 +5763,8 @@ function publicAssetsURL(...path) {
 }
 
 const checksums = {
-  "landing": "v3.5.0--80paaJ_S_NtYCyJ9Vg-W7YbIaTavMu_3QrdQapWfZ7U",
-  "posts": "v3.5.0--F8qXUnIykgx84kTAO5iSngKLctmOlBfYeACYOSFsv2g"
+  "landing": "v3.5.0--RG4ZxIupQOOn57x99XiKYzNnptwJqlCV1oP0JS3dA_A",
+  "posts": "v3.5.0--snVkUNaqyAi4ljyQl4okESFX4UYaX4WhypUNky5uUvU"
 };
 const checksumsStructure = {
   "landing": "Vpx2hEOXXMuhE2DuRUUpwU7ujd0K8Dq4VpqrrEXQtH8",
@@ -5769,7 +5837,7 @@ async function fetchDatabase(event, collection) {
   });
 }
 
-const collections = {
+const collections$1 = {
 };
 
 const DEFAULT_ENDPOINT = "https://api.iconify.design";
@@ -5779,7 +5847,7 @@ const _qjiKIB = defineCachedEventHandler(async (event) => {
     return createError$1({ status: 400, message: "Invalid icon request" });
   const options = useAppConfig().icon;
   const collectionName = event.context.params?.collection?.replace(/\.json$/, "");
-  const collection = collectionName ? await collections[collectionName]?.() : null;
+  const collection = collectionName ? await collections$1[collectionName]?.() : null;
   const apiEndPoint = options.iconifyApiEndpoint || DEFAULT_ENDPOINT;
   const icons = url.searchParams.get("icons")?.split(",");
   if (collection) {
@@ -5821,6 +5889,3220 @@ const _qjiKIB = defineCachedEventHandler(async (event) => {
   swr: true,
   maxAge: 60 * 60 * 24 * 7
   // 1 week
+});
+
+const components = {
+  "ContentHero": {
+    "mode": "all",
+    "prefetch": false,
+    "preload": false,
+    "filePath": "app/components/content/ContentHero.vue",
+    "pascalName": "ContentHero",
+    "kebabName": "content-hero",
+    "chunkName": "components/content-hero",
+    "priority": 1,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "bg",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg\""
+        },
+        {
+          "name": "avatar",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"https://randomuser.me/api/portraits/men/78.jpg\""
+        },
+        {
+          "name": "ctaLink",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"/\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "heading",
+          "type": "{ mdcUnwrap: string; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{ mdcUnwrap: string; }",
+            "schema": {
+              "mdcUnwrap": {
+                "name": "mdcUnwrap",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": true,
+                "type": "string",
+                "schema": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "subheading",
+          "type": "{ mdcUnwrap: string; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{ mdcUnwrap: string; }",
+            "schema": {
+              "mdcUnwrap": {
+                "name": "mdcUnwrap",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": true,
+                "type": "string",
+                "schema": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "ctaText",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { heading?: (props: { mdcUnwrap: string; }) => any; } & { subheading?: (props: { mdcUnwrap: string; }) => any; } & { ctaText?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { heading?: (props: { mdcUnwrap: string; }) => any; } & { subheading?: (props: { mdcUnwrap: string; }) => any; } & { ctaText?: (props: {}) => any; }",
+            "schema": {
+              "heading": {
+                "name": "heading",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: { mdcUnwrap: string; }) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: { mdcUnwrap: string; }): any",
+                  "schema": {}
+                }
+              },
+              "subheading": {
+                "name": "subheading",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: { mdcUnwrap: string; }) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: { mdcUnwrap: string; }): any",
+                  "schema": {}
+                }
+              },
+              "ctaText": {
+                "name": "ctaText",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "bg",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "avatar",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "ctaLink",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "p7NQMJD0MoDljfC8_erhqQonKb72SaBYM2A4n7_EPXA"
+    }
+  },
+  "ProseA": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseA.vue",
+    "pascalName": "ProseA",
+    "kebabName": "prose-a",
+    "chunkName": "components/prose-a",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "href",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "target",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\"",
+          "schema": {
+            "kind": "enum",
+            "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\"",
+            "schema": {
+              "0": "\"_blank\"",
+              "1": "\"_parent\"",
+              "2": "\"_self\"",
+              "3": "\"_top\""
+            }
+          },
+          "default": "void 0"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "target",
+          "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\"",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\"",
+            "schema": {
+              "0": "\"_blank\"",
+              "1": "\"_parent\"",
+              "2": "\"_self\"",
+              "3": "\"_top\""
+            }
+          }
+        }
+      ],
+      "hash": "tDgxMi3CSgEk69tGku8FdKgmrktxDAEN3HztCvYyrwY"
+    }
+  },
+  "ProseBlockquote": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue",
+    "pascalName": "ProseBlockquote",
+    "kebabName": "prose-blockquote",
+    "chunkName": "components/prose-blockquote",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "PA_xaX6JLhO11oJnz5ZTb9_oiKdcfcPeqK1ukL7OnxM"
+    }
+  },
+  "ProseCode": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseCode.vue",
+    "pascalName": "ProseCode",
+    "kebabName": "prose-code",
+    "chunkName": "components/prose-code",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "6r1eE8c-c6_BYbMiso8AS6EW0F4y9iK5-aey9mcxcng"
+    }
+  },
+  "ProseEm": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseEm.vue",
+    "pascalName": "ProseEm",
+    "kebabName": "prose-em",
+    "chunkName": "components/prose-em",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "Eo-c6FLrLoIolYuSPZqMkNYcGJWNN6zwjIWltlzdCB8"
+    }
+  },
+  "ProseH1": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH1.vue",
+    "pascalName": "ProseH1",
+    "kebabName": "prose-h1",
+    "chunkName": "components/prose-h1",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "nO9-7mHq72vO_AeulFdHSz1qOoH4jhGcpjUQDpNnN7Y"
+    }
+  },
+  "ProseH2": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH2.vue",
+    "pascalName": "ProseH2",
+    "kebabName": "prose-h2",
+    "chunkName": "components/prose-h2",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "VHvbERrKc8LZwn-5SzUDL5pzxlvqtfhF1jwiGiCYwrY"
+    }
+  },
+  "ProseH3": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH3.vue",
+    "pascalName": "ProseH3",
+    "kebabName": "prose-h3",
+    "chunkName": "components/prose-h3",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "D0i_nNsch6c7s3om8vatBPaVxQH6GH0VaFSx048zqow"
+    }
+  },
+  "ProseH4": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH4.vue",
+    "pascalName": "ProseH4",
+    "kebabName": "prose-h4",
+    "chunkName": "components/prose-h4",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "P69xDTR2eq-LqRI7h-bGEI7YZNwDaNXKvveEtBSA5UE"
+    }
+  },
+  "ProseH5": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH5.vue",
+    "pascalName": "ProseH5",
+    "kebabName": "prose-h5",
+    "chunkName": "components/prose-h5",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "iRxs4pEciGvJzd4WkA20UhuuDVHZJVftjuzBoRTMfbM"
+    }
+  },
+  "ProseH6": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseH6.vue",
+    "pascalName": "ProseH6",
+    "kebabName": "prose-h6",
+    "chunkName": "components/prose-h6",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "id",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; } & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "((props: {}) => any) & ((props: {}) => any)",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "UYPoc9YVQVrJixA-svRNNoliHYWg7_x9VXE_HKoMlG8"
+    }
+  },
+  "ProseHr": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseHr.vue",
+    "pascalName": "ProseHr",
+    "kebabName": "prose-hr",
+    "chunkName": "components/prose-hr",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [],
+      "events": [],
+      "exposed": [],
+      "hash": "wz152eDeL1PX9D6XRJmKnD5wZPo7dvqZHPUYgJ89m_s"
+    }
+  },
+  "ProseImg": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseImg.vue",
+    "pascalName": "ProseImg",
+    "kebabName": "prose-img",
+    "chunkName": "components/prose-img",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "src",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "alt",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "width",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string | number",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          },
+          "default": "void 0"
+        },
+        {
+          "name": "height",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string | number",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          },
+          "default": "void 0"
+        }
+      ],
+      "slots": [],
+      "events": [],
+      "exposed": [
+        {
+          "name": "src",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "width",
+          "type": "string | number",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          }
+        },
+        {
+          "name": "height",
+          "type": "string | number",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          }
+        }
+      ],
+      "hash": "KqNYAiv0jqUNuWnm6luX9ztsiclbBSKWUxsalglg268"
+    }
+  },
+  "ProseLi": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseLi.vue",
+    "pascalName": "ProseLi",
+    "kebabName": "prose-li",
+    "chunkName": "components/prose-li",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "CKUQZJz2zgVMvzcPskfmIeFnLvdvMZyLkFJohBwa8SM"
+    }
+  },
+  "ProseOl": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseOl.vue",
+    "pascalName": "ProseOl",
+    "kebabName": "prose-ol",
+    "chunkName": "components/prose-ol",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "pKZuxHMK6c2_L6CvDDMVCVJ-Rz2zkRkR0w23Zozuncw"
+    }
+  },
+  "ProseP": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseP.vue",
+    "pascalName": "ProseP",
+    "kebabName": "prose-p",
+    "chunkName": "components/prose-p",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "s6nV4B6EUcYcIGZcu1r_ieALTJ3Qf2yRVn8z6gOIzEI"
+    }
+  },
+  "ProsePre": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProsePre.vue",
+    "pascalName": "ProsePre",
+    "kebabName": "prose-pre",
+    "chunkName": "components/prose-pre",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "code",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "meta",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "null"
+        },
+        {
+          "name": "language",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "null"
+        },
+        {
+          "name": "highlights",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "number[]",
+          "schema": {
+            "kind": "array",
+            "type": "number[]",
+            "schema": {
+              "0": "number"
+            }
+          },
+          "default": "[]"
+        },
+        {
+          "name": "filename",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "class",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "meta",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        },
+        {
+          "name": "highlights",
+          "type": "number[]",
+          "description": "",
+          "schema": {
+            "kind": "array",
+            "type": "number[]",
+            "schema": {
+              "0": "number"
+            }
+          }
+        },
+        {
+          "name": "filename",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "HpIilDnQhrn9ExKWgviju0g7edMS48WtWae1LQPvBYU"
+    }
+  },
+  "ProseScript": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseScript.vue",
+    "pascalName": "ProseScript",
+    "kebabName": "prose-script",
+    "chunkName": "components/prose-script",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "src",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string",
+          "schema": "string",
+          "default": "\"\""
+        }
+      ],
+      "slots": [],
+      "events": [],
+      "exposed": [
+        {
+          "name": "src",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "vyh02jqu-RQbTID2g5Y4GEQav-rSkF85TzgaitD4S94"
+    }
+  },
+  "ProseStrong": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseStrong.vue",
+    "pascalName": "ProseStrong",
+    "kebabName": "prose-strong",
+    "chunkName": "components/prose-strong",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "LjmAVcsO_HKSo7rUe1nM3g3nGPNhvfbAEKvdL_BljTo"
+    }
+  },
+  "ProseTable": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTable.vue",
+    "pascalName": "ProseTable",
+    "kebabName": "prose-table",
+    "chunkName": "components/prose-table",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "TZmBlz8TDEU1-JkeQ63h7jPX-O6F5xI22u5Vi22h-QI"
+    }
+  },
+  "ProseTbody": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTbody.vue",
+    "pascalName": "ProseTbody",
+    "kebabName": "prose-tbody",
+    "chunkName": "components/prose-tbody",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "QZWh3if9JLXcgBshNZf2-Yg6N6xuzItbyPZAaYaIJ0c"
+    }
+  },
+  "ProseTd": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTd.vue",
+    "pascalName": "ProseTd",
+    "kebabName": "prose-td",
+    "chunkName": "components/prose-td",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "cYOn1fKuk1dyvjl2xK8ME8ygiNdipaBV8EV-MRJFMYo"
+    }
+  },
+  "ProseTh": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTh.vue",
+    "pascalName": "ProseTh",
+    "kebabName": "prose-th",
+    "chunkName": "components/prose-th",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "fY4ScoKvYKpsElpz5qxjMG-_U7DY8B3fcYam6i_NvxU"
+    }
+  },
+  "ProseThead": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseThead.vue",
+    "pascalName": "ProseThead",
+    "kebabName": "prose-thead",
+    "chunkName": "components/prose-thead",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "fktLi2zY-Injm8NmsNN3dVopP0YecWOutCAHaw1CTls"
+    }
+  },
+  "ProseTr": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTr.vue",
+    "pascalName": "ProseTr",
+    "kebabName": "prose-tr",
+    "chunkName": "components/prose-tr",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "6kAletrdmnlMm-30CrgiG40VqW8gb3Py6uR1aJTV1Bk"
+    }
+  },
+  "ProseUl": {
+    "mode": "all",
+    "global": true,
+    "prefetch": false,
+    "preload": false,
+    "filePath": "node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseUl.vue",
+    "pascalName": "ProseUl",
+    "kebabName": "prose-ul",
+    "chunkName": "components/prose-ul",
+    "priority": 0,
+    "_scanned": true,
+    "meta": {
+      "type": 1,
+      "props": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "{}",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "{}",
+            "schema": {}
+          }
+        }
+      ],
+      "events": [],
+      "exposed": [
+        {
+          "name": "$slots",
+          "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+          "description": "",
+          "schema": {
+            "kind": "object",
+            "type": "Readonly<InternalSlots> & { default?: (props: {}) => any; }",
+            "schema": {
+              "default": {
+                "name": "default",
+                "global": false,
+                "description": "",
+                "tags": [],
+                "required": false,
+                "type": "(props: {}) => any",
+                "schema": {
+                  "kind": "event",
+                  "type": "(props: {}): any",
+                  "schema": {}
+                }
+              }
+            }
+          }
+        }
+      ],
+      "hash": "DDNvAuAvcgNmyAUXJwSDmA1FkicawPzD_nTjhbfDHVM"
+    }
+  },
+  "Icon": {
+    "chunkName": "components/icon",
+    "global": true,
+    "kebabName": "icon",
+    "pascalName": "Icon",
+    "prefetch": false,
+    "preload": false,
+    "mode": "all",
+    "priority": 0,
+    "meta": {
+      "type": 1,
+      "props": [
+        {
+          "name": "name",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": true,
+          "type": "string",
+          "schema": "string"
+        },
+        {
+          "name": "customize",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "boolean | IconifyIconCustomizeCallback",
+          "schema": {
+            "kind": "enum",
+            "type": "boolean | IconifyIconCustomizeCallback",
+            "schema": {
+              "0": "false",
+              "1": "true",
+              "2": {
+                "kind": "event",
+                "type": "(content: string, name?: string, prefix?: string, provider?: string): string",
+                "schema": []
+              }
+            }
+          },
+          "default": "null"
+        },
+        {
+          "name": "size",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "string | number",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          },
+          "default": "null"
+        },
+        {
+          "name": "mode",
+          "global": false,
+          "description": "",
+          "tags": [],
+          "required": false,
+          "type": "\"svg\" | \"css\"",
+          "schema": {
+            "kind": "enum",
+            "type": "\"svg\" | \"css\"",
+            "schema": {
+              "0": "\"svg\"",
+              "1": "\"css\""
+            }
+          },
+          "default": "null"
+        }
+      ],
+      "slots": [],
+      "events": [],
+      "exposed": [
+        {
+          "name": "customize",
+          "type": "boolean | IconifyIconCustomizeCallback",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "boolean | IconifyIconCustomizeCallback",
+            "schema": {
+              "0": "false",
+              "1": "true",
+              "2": {
+                "kind": "event",
+                "type": "(content: string, name?: string, prefix?: string, provider?: string): string",
+                "schema": []
+              }
+            }
+          }
+        },
+        {
+          "name": "size",
+          "type": "string | number",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "string | number",
+            "schema": {
+              "0": "string",
+              "1": "number"
+            }
+          }
+        },
+        {
+          "name": "mode",
+          "type": "\"svg\" | \"css\"",
+          "description": "",
+          "schema": {
+            "kind": "enum",
+            "type": "\"svg\" | \"css\"",
+            "schema": {
+              "0": "\"svg\"",
+              "1": "\"css\""
+            }
+          }
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "schema": "string"
+        }
+      ],
+      "hash": "aFktfg79RoxhUJUbTqae26vK6eRtWxXTPNQOUXaL02A"
+    },
+    "name": "Icon",
+    "filePath": "node_modules/@nuxt/icon/dist/runtime/components/index.js"
+  }
+};
+
+const collections = {
+  "landing": {
+    "name": "landing",
+    "pascalName": "Landing",
+    "tableName": "_content_landing",
+    "source": [
+      {
+        "_resolved": true,
+        "prefix": "/",
+        "include": "**/*.md",
+        "cwd": "/Users/wavefunction/project-yd/content"
+      }
+    ],
+    "type": "page",
+    "fields": {
+      "id": "string",
+      "title": "string",
+      "body": "json",
+      "cta": "json",
+      "description": "string",
+      "extension": "string",
+      "featuredImage": "string",
+      "features": "json",
+      "frequentlyAskedQuestions": "json",
+      "hero": "json",
+      "meta": "json",
+      "navigation": "json",
+      "path": "string",
+      "pricing": "json",
+      "process": "json",
+      "seo": "json",
+      "socialMediaSection": "json",
+      "stem": "string",
+      "testimonials": "json"
+    },
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$ref": "#/definitions/__SCHEMA__",
+      "definitions": {
+        "landing": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "stem": {
+              "type": "string"
+            },
+            "extension": {
+              "type": "string",
+              "enum": [
+                "md",
+                "yaml",
+                "yml",
+                "json",
+                "csv",
+                "xml"
+              ]
+            },
+            "meta": {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            "path": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "seo": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": {}
+                }
+              ],
+              "default": {}
+            },
+            "body": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "children": {},
+                "toc": {}
+              },
+              "required": [
+                "type"
+              ],
+              "additionalProperties": false
+            },
+            "navigation": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "$content": {
+                        "editor": {
+                          "input": "icon"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description",
+                    "icon"
+                  ],
+                  "additionalProperties": false
+                }
+              ],
+              "default": true
+            },
+            "featuredImage": {
+              "type": "string",
+              "format": "uri",
+              "default": "/hero.png"
+            },
+            "hero": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "heading": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "subheading": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "image": {
+                  "$content": {
+                    "editor": {
+                      "input": "media"
+                    }
+                  },
+                  "type": "string",
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "avatar": {
+                  "$content": {
+                    "editor": {
+                      "input": "media"
+                    }
+                  },
+                  "type": "string",
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "cta": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "to": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "icon": {
+                        "$content": {
+                          "editor": {
+                            "input": "icon"
+                          }
+                        },
+                        "type": "string"
+                      },
+                      "trailing": {
+                        "type": "boolean"
+                      },
+                      "target": {
+                        "type": "string",
+                        "enum": [
+                          "_blank",
+                          "_self"
+                        ]
+                      },
+                      "color": {
+                        "type": "string",
+                        "enum": [
+                          "primary",
+                          "secondary",
+                          "accent",
+                          "error",
+                          "warning",
+                          "success",
+                          "info"
+                        ]
+                      },
+                      "variant": {
+                        "type": "string",
+                        "enum": [
+                          "raised",
+                          "outline",
+                          "text",
+                          "tonal",
+                          "flat"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "label",
+                      "to",
+                      "target",
+                      "color"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "heading",
+                "subheading",
+                "image",
+                "avatar"
+              ],
+              "additionalProperties": false
+            },
+            "pricing": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "plans": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "description": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "price": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "button": {
+                        "type": "object",
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "to": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "icon": {
+                            "$content": {
+                              "editor": {
+                                "input": "icon"
+                              }
+                            },
+                            "type": "string"
+                          },
+                          "trailing": {
+                            "type": "boolean"
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank",
+                              "_self"
+                            ]
+                          },
+                          "color": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "secondary",
+                              "accent",
+                              "error",
+                              "warning",
+                              "success",
+                              "info"
+                            ]
+                          },
+                          "variant": {
+                            "type": "string",
+                            "enum": [
+                              "raised",
+                              "outline",
+                              "text",
+                              "tonal",
+                              "flat"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "label",
+                          "to",
+                          "target",
+                          "color"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "features": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "highlight": {
+                        "type": "boolean"
+                      },
+                      "billing_period": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "billing_cycle": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description",
+                      "price",
+                      "button",
+                      "features",
+                      "billing_period",
+                      "billing_cycle"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "plans"
+              ],
+              "additionalProperties": false
+            },
+            "features": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "features": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "icon": {
+                        "$content": {
+                          "editor": {
+                            "input": "icon"
+                          }
+                        },
+                        "type": "string",
+                        "format": "uri",
+                        "minLength": 1
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "description": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 500
+                      }
+                    },
+                    "required": [
+                      "icon",
+                      "title",
+                      "description"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "features"
+              ],
+              "additionalProperties": false
+            },
+            "testimonials": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "testimonials": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "company": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "image": {
+                        "$content": {
+                          "editor": {
+                            "input": "media"
+                          }
+                        },
+                        "type": "string",
+                        "format": "uri",
+                        "minLength": 1
+                      },
+                      "content": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 500
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "role",
+                      "company",
+                      "image",
+                      "content"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "testimonials"
+              ],
+              "additionalProperties": false
+            },
+            "process": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "steps": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "image": {
+                        "$content": {
+                          "editor": {
+                            "input": "media"
+                          }
+                        },
+                        "type": "string",
+                        "format": "uri",
+                        "minLength": 1
+                      },
+                      "order": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                      },
+                      "step": {
+                        "type": "string",
+                        "enum": [
+                          "Discovery",
+                          "Design",
+                          "Development",
+                          "Deployment"
+                        ]
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "description": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 500
+                      }
+                    },
+                    "required": [
+                      "image",
+                      "order",
+                      "step",
+                      "title",
+                      "description"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "steps"
+              ],
+              "additionalProperties": false
+            },
+            "socialMediaSection": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "icon": {
+                  "$content": {
+                    "editor": {
+                      "input": "icon"
+                    }
+                  },
+                  "type": "string",
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "link": {
+                  "type": "string",
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "platform": {
+                  "type": "string",
+                  "enum": [
+                    "facebook",
+                    "twitter",
+                    "linkedin",
+                    "instagram",
+                    "x",
+                    "github",
+                    "youtube",
+                    "tiktok"
+                  ]
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "icon",
+                "link",
+                "platform"
+              ],
+              "additionalProperties": false
+            },
+            "frequentlyAskedQuestions": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "question": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "answer": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 500
+                      }
+                    },
+                    "required": [
+                      "question",
+                      "answer"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "questions"
+              ],
+              "additionalProperties": false
+            },
+            "cta": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 500
+                },
+                "button": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "to": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "icon": {
+                      "$content": {
+                        "editor": {
+                          "input": "icon"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "trailing": {
+                      "type": "boolean"
+                    },
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank",
+                        "_self"
+                      ]
+                    },
+                    "color": {
+                      "type": "string",
+                      "enum": [
+                        "primary",
+                        "secondary",
+                        "accent",
+                        "error",
+                        "warning",
+                        "success",
+                        "info"
+                      ]
+                    },
+                    "variant": {
+                      "type": "string",
+                      "enum": [
+                        "raised",
+                        "outline",
+                        "text",
+                        "tonal",
+                        "flat"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "to",
+                    "target",
+                    "color"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "button"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "id",
+            "stem",
+            "extension",
+            "meta",
+            "path",
+            "title",
+            "description",
+            "body",
+            "featuredImage",
+            "hero",
+            "pricing",
+            "features",
+            "testimonials",
+            "process",
+            "socialMediaSection",
+            "frequentlyAskedQuestions",
+            "cta"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "tableDefinition": "CREATE TABLE IF NOT EXISTS _content_landing (id TEXT PRIMARY KEY, \"title\" VARCHAR, \"body\" TEXT, \"cta\" TEXT, \"description\" VARCHAR, \"extension\" VARCHAR, \"featuredImage\" VARCHAR DEFAULT '/hero.png', \"features\" TEXT, \"frequentlyAskedQuestions\" TEXT, \"hero\" TEXT, \"meta\" TEXT, \"navigation\" TEXT DEFAULT true, \"path\" VARCHAR, \"pricing\" TEXT, \"process\" TEXT, \"seo\" TEXT DEFAULT '{}', \"socialMediaSection\" TEXT, \"stem\" VARCHAR, \"testimonials\" TEXT, \"__hash__\" TEXT UNIQUE);"
+  },
+  "posts": {
+    "name": "posts",
+    "pascalName": "Posts",
+    "tableName": "_content_posts",
+    "source": [
+      {
+        "_resolved": true,
+        "prefix": "/blog",
+        "include": "blog/**/*.md",
+        "cwd": "/Users/wavefunction/project-yd/content"
+      }
+    ],
+    "type": "page",
+    "fields": {
+      "id": "string",
+      "title": "string",
+      "body": "json",
+      "content": "string",
+      "description": "string",
+      "extension": "string",
+      "featuredImage": "string",
+      "meta": "json",
+      "navigation": "json",
+      "path": "string",
+      "seo": "json",
+      "stem": "string"
+    },
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$ref": "#/definitions/__SCHEMA__",
+      "definitions": {
+        "posts": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "stem": {
+              "type": "string"
+            },
+            "extension": {
+              "type": "string",
+              "enum": [
+                "md",
+                "yaml",
+                "yml",
+                "json",
+                "csv",
+                "xml"
+              ]
+            },
+            "meta": {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            "path": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 80,
+              "default": "Untitled Post"
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 220,
+              "default": ""
+            },
+            "seo": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": {}
+                }
+              ],
+              "default": {}
+            },
+            "body": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "children": {},
+                "toc": {}
+              },
+              "required": [
+                "type"
+              ],
+              "additionalProperties": false
+            },
+            "navigation": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "$content": {
+                        "editor": {
+                          "input": "icon"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description",
+                    "icon"
+                  ],
+                  "additionalProperties": false
+                }
+              ],
+              "default": true
+            },
+            "featuredImage": {
+              "type": "string",
+              "format": "uri",
+              "default": "/hero.png"
+            },
+            "content": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 5000,
+              "default": ""
+            }
+          },
+          "required": [
+            "id",
+            "stem",
+            "extension",
+            "meta",
+            "path",
+            "title",
+            "description",
+            "body",
+            "featuredImage",
+            "content"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "tableDefinition": "CREATE TABLE IF NOT EXISTS _content_posts (id TEXT PRIMARY KEY, \"title\" VARCHAR(80) DEFAULT 'Untitled Post', \"body\" TEXT, \"content\" VARCHAR(5000) DEFAULT '', \"description\" VARCHAR(220) DEFAULT '', \"extension\" VARCHAR, \"featuredImage\" VARCHAR DEFAULT '/hero.png', \"meta\" TEXT, \"navigation\" TEXT DEFAULT true, \"path\" VARCHAR, \"seo\" TEXT DEFAULT '{}', \"stem\" VARCHAR, \"__hash__\" TEXT UNIQUE);"
+  },
+  "info": {
+    "name": "info",
+    "pascalName": "Info",
+    "tableName": "_content_info",
+    "source": [],
+    "type": "data",
+    "fields": {},
+    "schema": {
+      "$ref": "#/definitions/info",
+      "definitions": {},
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "tableDefinition": "CREATE TABLE IF NOT EXISTS _content_info (id TEXT PRIMARY KEY, \"ready\" BOOLEAN, \"structureVersion\" VARCHAR, \"version\" VARCHAR, \"__hash__\" TEXT UNIQUE);"
+  }
+};
+const gitInfo = {
+  "name": "project-yd",
+  "owner": "patgpt",
+  "url": "https://github.com/patgpt/project-yd"
+};
+const appConfigSchema = {
+  "properties": {
+    "id": "#appConfig",
+    "properties": {
+      "icon": {
+        "title": "Nuxt Icon",
+        "description": "Configure Nuxt Icon module preferences.",
+        "tags": [
+          "@studioIcon material-symbols:star"
+        ],
+        "id": "#appConfig/icon",
+        "properties": {
+          "size": {
+            "title": "Icon Size",
+            "description": "Set the default icon size.",
+            "tags": [
+              "@studioIcon material-symbols:format-size-rounded"
+            ],
+            "tsType": "string | undefined",
+            "id": "#appConfig/icon/size",
+            "default": {},
+            "type": "any"
+          },
+          "class": {
+            "title": "CSS Class",
+            "description": "Set the default CSS class.",
+            "tags": [
+              "@studioIcon material-symbols:css"
+            ],
+            "id": "#appConfig/icon/class",
+            "default": "",
+            "type": "string"
+          },
+          "attrs": {
+            "title": "Default Attributes",
+            "description": "Attributes applied to every icon component.\n\n@default { \"aria-hidden\": true }",
+            "tags": [
+              "@studioIcon material-symbols:settings"
+            ],
+            "tsType": "Record<string, string | number | boolean>",
+            "id": "#appConfig/icon/attrs",
+            "default": {
+              "aria-hidden": true
+            },
+            "type": "object"
+          },
+          "mode": {
+            "title": "Default Rendering Mode",
+            "description": "Set the default rendering mode for the icon component",
+            "enum": [
+              "css",
+              "svg"
+            ],
+            "tags": [
+              "@studioIcon material-symbols:move-down-rounded"
+            ],
+            "id": "#appConfig/icon/mode",
+            "default": "css",
+            "type": "string"
+          },
+          "aliases": {
+            "title": "Icon aliases",
+            "description": "Define Icon aliases to update them easily without code changes.",
+            "tags": [
+              "@studioIcon material-symbols:star-rounded"
+            ],
+            "tsType": "{ [alias: string]: string }",
+            "id": "#appConfig/icon/aliases",
+            "default": {},
+            "type": "object"
+          },
+          "cssSelectorPrefix": {
+            "title": "CSS Selector Prefix",
+            "description": "Set the default CSS selector prefix.",
+            "tags": [
+              "@studioIcon material-symbols:format-textdirection-l-to-r"
+            ],
+            "id": "#appConfig/icon/cssSelectorPrefix",
+            "default": "i-",
+            "type": "string"
+          },
+          "cssLayer": {
+            "title": "CSS Layer Name",
+            "description": "Set the default CSS `@layer` name.",
+            "tags": [
+              "@studioIcon material-symbols:layers"
+            ],
+            "tsType": "string | undefined",
+            "id": "#appConfig/icon/cssLayer",
+            "default": {},
+            "type": "any"
+          },
+          "cssWherePseudo": {
+            "title": "Use CSS `:where()` Pseudo Selector",
+            "description": "Use CSS `:where()` pseudo selector to reduce specificity.",
+            "tags": [
+              "@studioIcon material-symbols:low-priority"
+            ],
+            "id": "#appConfig/icon/cssWherePseudo",
+            "default": true,
+            "type": "boolean"
+          },
+          "collections": {
+            "title": "Icon Collections",
+            "description": "List of known icon collections name. Used to resolve collection name ambiguity.\ne.g. `simple-icons-github` -> `simple-icons:github` instead of `simple:icons-github`\n\nWhen not provided, will use the full Iconify collection list.",
+            "tags": [
+              "@studioIcon material-symbols:format-list-bulleted"
+            ],
+            "tsType": "string[] | null",
+            "id": "#appConfig/icon/collections",
+            "default": null,
+            "type": "any"
+          },
+          "customCollections": {
+            "title": "Custom Icon Collections",
+            "tags": [
+              "@studioIcon material-symbols:format-list-bulleted"
+            ],
+            "tsType": "string[] | null",
+            "id": "#appConfig/icon/customCollections",
+            "default": null,
+            "type": "any"
+          },
+          "provider": {
+            "title": "Icon Provider",
+            "description": "Provider to use for fetching icons\n\n- `server` - Fetch icons with a server handler\n- `iconify` - Fetch icons with Iconify API, purely client-side\n- `none` - Do not fetch icons (use client bundle only)\n\n`server` by default; `iconify` when `ssr: false`",
+            "enum": [
+              "server",
+              "iconify",
+              "none"
+            ],
+            "tags": [
+              "@studioIcon material-symbols:cloud"
+            ],
+            "type": "\"server\" | \"iconify\" | undefined",
+            "id": "#appConfig/icon/provider"
+          },
+          "iconifyApiEndpoint": {
+            "title": "Iconify API Endpoint URL",
+            "description": "Define a custom Iconify API endpoint URL. Useful if you want to use a self-hosted Iconify API. Learn more: https://iconify.design/docs/api.",
+            "tags": [
+              "@studioIcon material-symbols:api"
+            ],
+            "id": "#appConfig/icon/iconifyApiEndpoint",
+            "default": "https://api.iconify.design",
+            "type": "string"
+          },
+          "fallbackToApi": {
+            "title": "Fallback to Iconify API",
+            "description": "Fallback to Iconify API if server provider fails to found the collection.",
+            "tags": [
+              "@studioIcon material-symbols:public"
+            ],
+            "enum": [
+              true,
+              false,
+              "server-only",
+              "client-only"
+            ],
+            "type": "boolean | \"server-only\" | \"client-only\"",
+            "id": "#appConfig/icon/fallbackToApi",
+            "default": true
+          },
+          "localApiEndpoint": {
+            "title": "Local API Endpoint Path",
+            "description": "Define a custom path for the local API endpoint.",
+            "tags": [
+              "@studioIcon material-symbols:api"
+            ],
+            "id": "#appConfig/icon/localApiEndpoint",
+            "default": "/api/_nuxt_icon",
+            "type": "string"
+          },
+          "fetchTimeout": {
+            "title": "Fetch Timeout",
+            "description": "Set the timeout for fetching icons.",
+            "tags": [
+              "@studioIcon material-symbols:timer"
+            ],
+            "id": "#appConfig/icon/fetchTimeout",
+            "default": 1500,
+            "type": "number"
+          },
+          "customize": {
+            "title": "Customize callback",
+            "description": "Customize icon content (replace stroke-width, colors, etc...).",
+            "tags": [
+              "@studioIcon material-symbols:edit"
+            ],
+            "type": "IconifyIconCustomizeCallback",
+            "id": "#appConfig/icon/customize"
+          }
+        },
+        "type": "object",
+        "default": {
+          "size": {},
+          "class": "",
+          "attrs": {
+            "aria-hidden": true
+          },
+          "mode": "css",
+          "aliases": {},
+          "cssSelectorPrefix": "i-",
+          "cssLayer": {},
+          "cssWherePseudo": true,
+          "collections": null,
+          "customCollections": null,
+          "iconifyApiEndpoint": "https://api.iconify.design",
+          "fallbackToApi": true,
+          "localApiEndpoint": "/api/_nuxt_icon",
+          "fetchTimeout": 1500
+        }
+      }
+    },
+    "type": "object",
+    "default": {
+      "icon": {
+        "size": {},
+        "class": "",
+        "attrs": {
+          "aria-hidden": true
+        },
+        "mode": "css",
+        "aliases": {},
+        "cssSelectorPrefix": "i-",
+        "cssLayer": {},
+        "cssWherePseudo": true,
+        "collections": null,
+        "customCollections": null,
+        "iconifyApiEndpoint": "https://api.iconify.design",
+        "fallbackToApi": true,
+        "localApiEndpoint": "/api/_nuxt_icon",
+        "fetchTimeout": 1500
+      }
+    }
+  },
+  "default": {
+    "icon": {
+      "size": {},
+      "class": "",
+      "attrs": {
+        "aria-hidden": true
+      },
+      "mode": "css",
+      "aliases": {},
+      "cssSelectorPrefix": "i-",
+      "cssLayer": {},
+      "cssWherePseudo": true,
+      "collections": null,
+      "customCollections": null,
+      "iconifyApiEndpoint": "https://api.iconify.design",
+      "fallbackToApi": true,
+      "localApiEndpoint": "/api/_nuxt_icon",
+      "fetchTimeout": 1500
+    }
+  }
+};
+
+const _MOszcN = eventHandler(async () => {
+  const mappedComponents = Object.values(components).map(({ pascalName, filePath, meta }) => {
+    return {
+      name: pascalName,
+      path: filePath,
+      meta: {
+        props: meta.props,
+        slots: meta.slots,
+        events: meta.events
+      }
+    };
+  });
+  const appConfig = useAppConfig();
+  const runtimeConfig = useRuntimeConfig();
+  const { content } = runtimeConfig;
+  const { preview } = runtimeConfig.public;
+  const { version } = content;
+  return {
+    version,
+    preview,
+    gitInfo,
+    collections,
+    appConfigSchema,
+    appConfig,
+    components: mappedComponents
+  };
+});
+
+const _LOSHxp = defineEventHandler((event) => {
+  appendHeader(event, "Access-Control-Allow-Origin", "*");
+  const componentName = (event.context.params?.["component?"] || "").replace(/\.json$/, "");
+  if (componentName) {
+    const meta = components[pascalCase(componentName)];
+    if (!meta) {
+      throw createError$1({
+        statusMessage: "Components not found!",
+        statusCode: 404,
+        data: {
+          description: "Please make sure you are looking for correct component"
+        }
+      });
+    }
+    return meta;
+  }
+  return components;
 });
 
 const _SxA8c9 = defineEventHandler(() => {});
@@ -6213,6 +9495,10 @@ const handlers = [
   { route: '', handler: __UEseD, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_Q946NE, lazy: true, middleware: false, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _qjiKIB, lazy: false, middleware: false, method: undefined },
+  { route: '/__preview.json', handler: _MOszcN, lazy: false, middleware: false, method: "get" },
+  { route: '/api/component-meta', handler: _LOSHxp, lazy: false, middleware: false, method: "get" },
+  { route: '/api/component-meta.json', handler: _LOSHxp, lazy: false, middleware: false, method: "get" },
+  { route: '/api/component-meta/:component?', handler: _LOSHxp, lazy: false, middleware: false, method: "get" },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/:collection/sql_dump.txt', handler: _AaxHDF, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/:collection/query', handler: _Avrg_A, lazy: false, middleware: false, method: undefined },

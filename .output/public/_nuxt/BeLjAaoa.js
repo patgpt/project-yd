@@ -1,1 +1,0 @@
-import{_ as o,c as r,o as n,av as s}from"./DUQeYSlU.js";const t={};function a(e,c){return n(),r("strong",null,[s(e.$slots,"default")])}const l=Object.assign(o(t,[["render",a]]),{__name:"ProseStrong"});export{l as default};

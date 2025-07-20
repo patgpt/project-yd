@@ -1,1 +1,0 @@
-import{_ as o,c as s,o as r,av as c}from"./DUQeYSlU.js";const n={};function t(e,a){return r(),s("code",null,[c(e.$slots,"default")])}const l=Object.assign(o(n,[["render",t]]),{__name:"ProseCode"});export{l as default};
