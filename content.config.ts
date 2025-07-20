@@ -130,7 +130,7 @@ export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: "page",
-      source: "**/*.md",
+      source: "index.md",
       schema: createBaseSchema().extend({
         featuredImage: z.string().url().default("/hero.png"),
         hero: createHeroSchema(),
