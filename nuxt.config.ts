@@ -49,6 +49,18 @@ export default defineNuxtConfig({
     },
     baseURL: "/",
   },
+  content: {
+    preview: {
+      dev: true,
+
+      api: "https://api.nuxt.studio",
+      gitInfo: {
+        name: "project-yd",
+        owner: "patgpt",
+        url: "https://github.com/patgpt/project-yd",
+      },
+    },
+  },
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
