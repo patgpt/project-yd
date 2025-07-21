@@ -158,7 +158,7 @@ export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: "page",
-      source: "**/*.yml",
+      source: "*.yml",
       schema: createBaseSchema().extend({
         featuredImage: z.string().url().default("/hero.png"),
         hero: createHeroSchema(),
