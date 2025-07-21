@@ -130,11 +130,35 @@ const createCtaSchema = () =>
     button: createLinkSchema(),
   });
 
+const authorSchema = z.object({
+  name: z.string().min(2).max(50).default("Anonymous"),
+  bio: z.string().max(200).default(""),
+  avatar: z.string().url().default("/avatar.png").editor({ input: "media" }),
+  socialLinks: z
+    .array(
+      z.object({
+        platform: createEnum([
+          "facebook",
+          "twitter",
+          "linkedin",
+          "instagram",
+          "x",
+          "github",
+          "youtube",
+          "tiktok",
+        ]),
+        icon: z.string().editor({ input: "icon" }),
+        url: z.string().url().default(""),
+      }),
+    )
+    .optional(),
+});
+
 export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: "page",
-      source: "index.yml",
+      source: "**/*.yml",
       schema: createBaseSchema().extend({
         featuredImage: z.string().url().default("/hero.png"),
         hero: createHeroSchema(),
@@ -155,7 +179,84 @@ export default defineContentConfig({
         description: z.string().max(220).default(""),
         featuredImage: z.string().url().default("/hero.png"),
         content: z.string().min(10).max(5000).default(""),
+        author: authorSchema,
+        date: z.string().datetime().default(new Date().toISOString()),
+        tags: z.array(z.string().min(1).max(30)).optional(),
+        categories: z.array(z.string().min(1).max(30)).optional(),
+        readingTime: z.string().default("0 min"),
+        seo: z
+          .object({
+            title: z.string().min(2).max(60).default(""),
+            description: z.string().max(160).default(""),
+            keywords: z.array(z.string().min(1).max(30)).optional(),
+
+            ogImage: z
+              .string()
+              .url()
+              .default("/og-image.png")
+              .editor({ input: "media" }),
+            twitterImage: z
+              .string()
+              .url()
+              .default("/twitter-image.png")
+              .editor({ input: "media" }),
+            canonical: z.string().url().default(""),
+            robots: z
+              .object({
+                index: z.boolean().default(true),
+                follow: z.boolean().default(true),
+                noarchive: z.boolean().default(false),
+                nosnippet: z.boolean().default(false),
+              })
+              .default({
+                index: true,
+                follow: true,
+                noarchive: false,
+                nosnippet: false,
+              }),
+          })
+          .default({
+            title: "Yellowdog Digital",
+            description: "Your digital partner for success",
+            keywords: [
+              "digital marketing",
+              "web development",
+              "SEO",
+              "content creation",
+              "social media",
+              "branding",
+              "UX/UI design",
+              "e-commerce",
+              "mobile app development",
+              "digital strategy",
+              "online advertising",
+              "email marketing",
+              "analytics",
+              "conversion optimization",
+              "digital transformation",
+              "cloud computing",
+              "cybersecurity",
+              "data analytics",
+              "AI and machine learning",
+              "digital consulting",
+              "digital solutions",
+            ],
+            ogImage: "/og-image.png",
+            twitterImage: "/twitter-image.png",
+            canonical: "",
+            robots: {
+              index: true,
+              follow: true,
+              noarchive: false,
+              nosnippet: false,
+            },
+          }),
       }),
+    }),
+    authors: defineCollection({
+      type: "data",
+      source: "data/authors/**/*.yml",
+      schema: authorSchema,
     }),
   },
 });

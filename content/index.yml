@@ -1,13 +1,13 @@
 title: Yellowdog Digital - Web Design & Development
 description: We build beautiful, high-performance websites that drive results.
-featuredImage: /hero.png
+featuredImage: /brand/yellowdog-logo.webp
 hero:
   title: Hero Section
   description: This is the hero section of the landing page.
   heading: Innovative Web Solutions for Modern Businesses
   subheading: From concept to launch, we deliver web experiences that captivate and convert.
-  image: /textures/purple-texture.png
-  avatar: /logo.png
+  image: /textures/purple-texture.webp
+  avatar: /brand/yellowdog-logo.webp
   cta:
     - label: Get Started
       to: /contact
@@ -92,12 +92,12 @@ testimonials:
     - name: Jane Doe
       role: CEO
       company: TechCorp
-      image: /logo.png
+      image: /brand/yellowdog-logo.webp
       content: Yellowdog Digital transformed our online presence. Their team is professional, creative, and delivered beyond our expectations.
     - name: John Smith
       role: Marketing Director
       company: Innovate LLC
-      image: /logo.png
+      image: /brand/yellowdog-logo.webp
       content: The new website has significantly improved our lead generation. We couldn't be happier with the results.
 process:
   title: Our Process

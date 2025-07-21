@@ -61,6 +61,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
@@ -71,6 +72,9 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "vuetify-nuxt-module",
   ],
+  experimental: {
+    typedPages: true,
+  },
   vuetify: {
     moduleOptions: {
       /* module specific options */
