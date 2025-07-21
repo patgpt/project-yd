@@ -1,6 +1,8 @@
 <template>
-  <ContentRenderer v-if="post" :value="post" />
-  <div v-else>Post not found</div>
+  <VContainer d-flex justify-center align-with-title class="d-flex flex-column">
+    <ContentRenderer v-if="post" :value="post" />
+    <div v-else>No posts homie</div>
+  </VContainer>
 </template>
 <script lang="ts" setup>
 import { ContentRenderer } from "#components";

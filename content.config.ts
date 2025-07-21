@@ -71,7 +71,7 @@ const createPricingSchema = () =>
 
 const createFeaturesSchema = () =>
   createBaseSchema().extend({
-    features: z.array(
+    items: z.array(
       z.object({
         icon: z.string().url().nonempty().editor({ input: "icon" }),
         title: z.string().nonempty(),
@@ -82,18 +82,22 @@ const createFeaturesSchema = () =>
 
 const createSocialLinkSchema = () =>
   createBaseSchema().extend({
-    icon: z.string().url().nonempty().editor({ input: "icon" }),
-    link: z.string().url().nonempty(),
-    platform: createEnum([
-      "facebook",
-      "twitter",
-      "linkedin",
-      "instagram",
-      "x",
-      "github",
-      "youtube",
-      "tiktok",
-    ]),
+    links: z.array(
+      z.object({
+        icon: z.string().url().nonempty().editor({ input: "icon" }),
+        link: z.string().url().nonempty(),
+        platform: createEnum([
+          "facebook",
+          "twitter",
+          "linkedin",
+          "instagram",
+          "x",
+          "github",
+          "youtube",
+          "tiktok",
+        ]),
+      }),
+    ),
   });
 
 const createFrequentlyAskedQuestionsSchema = () =>
@@ -130,7 +134,7 @@ export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: "page",
-      source: "index.md",
+      source: "index.yml",
       schema: createBaseSchema().extend({
         featuredImage: z.string().url().default("/hero.png"),
         hero: createHeroSchema(),

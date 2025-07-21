@@ -38,9 +38,8 @@
     </VAppBar>
 
     <VMain>
-      <VContainer>
-        <NuxtPage />
-      </VContainer>
+      <NuxtPage />
+      <ContentNewsletter />
     </VMain>
 
     <VFooter elevation="2" color="black" class="d-flex flex-column pa-4">

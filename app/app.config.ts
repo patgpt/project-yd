@@ -13,6 +13,11 @@ export default defineAppConfig({
       to: "/about",
     },
     {
+      title: "Blog",
+      icon: "mdi-blog",
+      to: "/blog",
+    },
+    {
       title: "Services",
       icon: "mdi-briefcase",
       to: "/services",

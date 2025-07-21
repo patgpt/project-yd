@@ -1,0 +1,9 @@
+---
+title: Hello World
+description: This is a sample blog post.
+featuredImage: /hero.png
+---
+
+## Hello World
+
+aslkdjlaskjdlkasjdklasjdkl

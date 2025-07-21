@@ -5,14 +5,29 @@
       Welcome to our blog! Here you will find the latest updates, insights, and
       stories from our team.
     </p>
-    <!-- No posts we should show a proper message -->
-    <div v-if="!posts || posts.length === 0">Home not found</div>
 
     <!-- Render the first post as a featured post -->
     <ContentRenderer v-if="herpPost" :value="herpPost" />
     <!-- traverse the remaining posts -->
     <!-- Design a post card component -->
     <div v-for="post in posts" :key="post.id">
+      <NuxtLink
+        :to="`/blog/${post.stem}`"
+        class="d-block mb-4 text-decoration-none"
+      >
+        <VCard class="pa-4">
+          <VCardTitle class="text-h5 mb-2">{{ post.title }}</VCardTitle>
+          <VCardSubtitle class="text-caption text-muted mb-2">
+            <!-- {{ post.id | formatDate }} -->
+          </VCardSubtitle>
+          <VCardText class="text-body-2 text-muted">
+            {{ post.description }}
+          </VCardText>
+          <VCardActions>
+            <VBtn color="primary" variant="text">Read More</VBtn>
+          </VCardActions>
+        </VCard>
+      </NuxtLink>
       <ContentRenderer :value="post" />
     </div>
     <!-- Here will be the pagination controls -->
@@ -38,5 +53,5 @@ if (!herpPost) {
     statusMessage: "Post not found",
   });
 }
-const posts = pages.value.slice(1);
+const posts = pages.value;
 </script>
