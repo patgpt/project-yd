@@ -1,0 +1,18 @@
+slug: starter-website
+name: Starter Website
+description: Perfect for small businesses and personal brands getting started online
+price: $2,999
+billingPeriod: one-time
+billingCycle: project
+features:
+  - Custom responsive design
+  - Up to 5 pages
+  - Contact form integration
+  - Basic SEO optimization
+  - 3 months support
+  - Mobile-first approach
+highlighted: false
+popular: false
+buttonText: Get Started
+buttonLink: https://example.com/contact
+order: 1

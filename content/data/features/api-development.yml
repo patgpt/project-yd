@@ -1,0 +1,7 @@
+slug: api-development
+title: API Development
+description: Custom API development and third-party integrations to connect your application with other services.
+icon: mdi-api
+image: /images/api.png
+featured: false
+order: 6

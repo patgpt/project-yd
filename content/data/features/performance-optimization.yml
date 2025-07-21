@@ -1,0 +1,7 @@
+slug: performance-optimization
+title: Performance Optimization
+description: Lightning-fast loading times with optimized code, image compression, and modern caching strategies.
+icon: mdi-speedometer
+image: /images/performance.png
+featured: true
+order: 2

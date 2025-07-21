@@ -1,0 +1,7 @@
+slug: security-features
+title: Security Features
+description: Enterprise-grade security with SSL certificates, data encryption, and protection against common vulnerabilities.
+icon: mdi-shield-check
+image: /images/security.png
+featured: false
+order: 4

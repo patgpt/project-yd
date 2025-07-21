@@ -1,0 +1,20 @@
+slug: professional-website
+name: Professional Website
+description: Comprehensive solution for growing businesses with advanced features
+price: $5,999
+billingPeriod: one-time
+billingCycle: project
+features:
+  - Custom responsive design
+  - Up to 15 pages
+  - Content Management System
+  - Advanced SEO optimization
+  - Contact forms & integrations
+  - Analytics setup
+  - 6 months support
+  - Performance optimization
+highlighted: true
+popular: true
+buttonText: Most Popular
+buttonLink: https://example.com/contact
+order: 2
