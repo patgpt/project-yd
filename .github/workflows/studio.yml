@@ -64,7 +64,7 @@ jobs:
           NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
-      # Deployment job
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
