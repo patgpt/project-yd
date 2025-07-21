@@ -1,0 +1,6 @@
+slug: what-technologies-do-you-use
+question: What technologies and frameworks do you specialize in?
+answer: We specialize in modern web technologies including Vue.js, Nuxt.js, React, Node.js, and TypeScript. For mobile development, we work with React Native and Flutter. We also have extensive experience with cloud platforms like AWS and Google Cloud, as well as modern DevOps practices.
+category: Technical
+order: 1
+featured: true

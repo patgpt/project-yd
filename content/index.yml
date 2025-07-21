@@ -1,157 +1,51 @@
-title: Yellowdog Digital - Web Design & Development
-description: We build beautiful, high-performance websites that drive results.
+title: Yellow Dog Development - Modern Web Solutions
+description: We build scalable, high-performance web applications that drive business results. Specializing in Vue.js, React, and modern development practices.
 featuredImage: /brand/yellowdog-logo.webp
 hero:
-  title: Hero Section
-  description: This is the hero section of the landing page.
-  heading: Innovative Web Solutions for Modern Businesses
-  subheading: From concept to launch, we deliver web experiences that captivate and convert.
-  image: /textures/purple-texture.webp
-  avatar: /brand/yellowdog-logo.webp
+  heading: Modern Web Solutions for Forward-Thinking Businesses
+  subheading: From innovative web applications to comprehensive digital strategies, we deliver experiences that captivate users and drive measurable results for your business.
+  image: /hero.png
   cta:
-    - label: Get Started
+    - label: Start Your Project
       to: /contact
       target: _self
-      color: primary
-      variant: raised
-    - label: Learn More
-      to: /about
+      variant: primary
+    - label: View Our Work
+      to: /services
       target: _self
-      color: secondary
       variant: outline
-pricing:
-  title: Our Pricing
-  description: Choose a plan that's right for you.
-  plans:
-    - title: Basic
-      description: Perfect for getting started.
-      price: "$99"
-      billing_period: per month
-      billing_cycle: Monthly
-      button:
-        label: Choose Plan
-        to: /contact?plan=basic
-        target: _self
-        color: primary
-        variant: raised
-      features:
-        - 1 Website
-        - 10GB Storage
-        - Basic Support
-      highlight: false
-    - title: Pro
-      description: For growing businesses.
-      price: "$199"
-      billing_period: per month
-      billing_cycle: Monthly
-      button:
-        label: Choose Plan
-        to: /contact?plan=pro
-        target: _self
-        color: primary
-        variant: raised
-      features:
-        - 5 Websites
-        - 50GB Storage
-        - Priority Support
-        - SEO Tools
-      highlight: true
-    - title: Enterprise
-      description: For large-scale applications.
-      price: "Custom"
-      billing_period: ""
-      billing_cycle: Annual
-      button:
-        label: Contact Us
-        to: /contact?plan=enterprise
-        target: _self
-        color: secondary
-        variant: outline
-      features:
-        - Unlimited Websites
-        - Unlimited Storage
-        - 24/7 Support
-        - Dedicated Account Manager
-features:
-  title: Our Features
-  description: Discover what makes us different.
-  items:
-    - icon: mdi-rocket-launch
-      title: Fast & Reliable
-      description: We build high-performance websites that load quickly and are always online.
-    - icon: mdi-cellphone-link
-      title: Fully Responsive
-      description: Our designs look great on all devices, from desktops to smartphones.
-    - icon: mdi-lock
-      title: Secure & Safe
-      description: We follow best practices to ensure your website and data are secure.
-testimonials:
-  title: What Our Clients Say
-  description: We're proud to have worked with amazing clients.
-  testimonials:
-    - name: Jane Doe
-      role: CEO
-      company: TechCorp
-      image: /brand/yellowdog-logo.webp
-      content: Yellowdog Digital transformed our online presence. Their team is professional, creative, and delivered beyond our expectations.
-    - name: John Smith
-      role: Marketing Director
-      company: Innovate LLC
-      image: /brand/yellowdog-logo.webp
-      content: The new website has significantly improved our lead generation. We couldn't be happier with the results.
-process:
-  title: Our Process
-  description: A streamlined approach to delivering excellence.
-  steps:
-    - image: /images/discovery.png
-      order: 1
-      step: Discovery
-      title: Discovery & Planning
-      description: We start by understanding your goals, audience, and requirements to create a solid plan.
-    - image: /images/design.png
-      order: 2
-      step: Design
-      title: Design & Prototyping
-      description: We create wireframes and mockups to visualize the user experience and interface.
-    - image: /images/development.png
-      order: 3
-      step: Development
-      title: Development & Testing
-      description: Our team builds the website with clean, efficient code and rigorously tests for quality.
-    - image: /images/deployment.png
-      order: 4
-      step: Deployment
-      title: Deployment & Launch
-      description: We handle the launch process to ensure a smooth and successful deployment.
-socialMediaSection:
-  title: Follow Us
-  description: Stay connected with us on social media.
-  links:
-    - icon: mdi-twitter
-      link: https://twitter.com/yellowdog
-      platform: twitter
-    - icon: mdi-linkedin
-      link: https://linkedin.com/company/yellowdog
-      platform: linkedin
-    - icon: mdi-github
-      link: https://github.com/yellowdog
-      platform: github
-frequentlyAskedQuestions:
-  title: Frequently Asked Questions
-  description: Have questions? We have answers.
-  questions:
-    - question: How long does it take to build a website?
-      answer: The timeline depends on the complexity of the project, but a typical website takes 4-6 weeks from start to finish.
-    - question: Do you provide ongoing support?
-      answer: Yes, we offer various support and maintenance plans to keep your website running smoothly after launch.
-    - question: Can you help with content creation?
-      answer: Absolutely! We have content strategists and copywriters who can help you craft compelling content for your site.
-cta:
-  title: Ready to Start Your Project?
-  description: Let's work together to create something amazing.
-  button:
-    label: Get in Touch
-    to: /contact
-    target: _self
-    color: primary
-    variant: raised
+# Reference to collections we created
+featuredTestimonials:
+  - emily-rodriguez
+  - david-kim
+pricingPlans:
+  - starter-website
+  - professional-website
+  - enterprise-solution
+featuredFaqs:
+  - what-technologies-do-you-use
+  - project-timeline
+  - pricing-structure
+featuredFeatures:
+  - responsive-design
+  - performance-optimization
+  - seo-optimization
+socialLinks:
+  - github
+  - linkedin
+  - twitter
+
+seo:
+  title: Yellow Dog Development - Expert Web Development Services
+  description: Professional web development services specializing in Vue.js, React, and modern web applications. Build scalable solutions that drive business results.
+  keywords:
+    - Web Development
+    - Vue.js Development
+    - React Development
+    - Custom Web Applications
+    - E-commerce Development
+    - Mobile App Development
+  ogImage: /brand/yellowdog-logo.webp
+  robots:
+    index: true
+    follow: true

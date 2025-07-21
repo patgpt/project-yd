@@ -1,0 +1,18 @@
+slug: sarah-chen
+name: Sarah Chen
+bio: Senior UI/UX Designer and Frontend Developer specializing in Vue.js and React. Passionate about creating accessible and user-friendly digital experiences.
+avatar: /avatars/sarah-chen.jpg
+email: sarah.chen@example.com
+socialLinks:
+  - platform: github
+    url: https://github.com/sarahchen
+    icon: mdi-github
+  - platform: linkedin
+    url: https://linkedin.com/in/sarahchen
+    icon: mdi-linkedin
+  - platform: twitter
+    url: https://twitter.com/sarahchen_dev
+    icon: mdi-twitter
+  - platform: website
+    url: https://sarahchen.dev
+    icon: mdi-web

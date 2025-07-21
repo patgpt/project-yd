@@ -1,0 +1,22 @@
+slug: enterprise-solution
+name: Enterprise Solution
+description: Full-scale web application development for complex business requirements
+price: $15,000+
+billingPeriod: one-time
+billingCycle: project
+features:
+  - Custom web application
+  - Database design & integration
+  - User authentication system
+  - Admin dashboard
+  - API development
+  - Third-party integrations
+  - Advanced security features
+  - Cloud deployment
+  - 12 months support
+  - Dedicated project manager
+highlighted: false
+popular: false
+buttonText: Contact Us
+buttonLink: https://example.com/contact
+order: 3

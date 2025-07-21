@@ -1,0 +1,15 @@
+slug: mike-johnson
+name: Mike Johnson
+bio: DevOps Engineer and Cloud Architecture specialist with expertise in AWS, Docker, and Kubernetes. Helps teams scale applications efficiently.
+avatar: /avatars/mike-johnson.jpg
+email: mike.johnson@example.com
+socialLinks:
+  - platform: github
+    url: https://github.com/mikejohnson
+    icon: mdi-github
+  - platform: linkedin
+    url: https://linkedin.com/in/mikejohnson
+    icon: mdi-linkedin
+  - platform: youtube
+    url: https://youtube.com/@mikejohnsondevops
+    icon: mdi-youtube

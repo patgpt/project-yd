@@ -42,6 +42,15 @@
     <VMain>
       <NuxtPage />
       <ContentNewsletter />
+      <VFab
+        extended
+        prepend-icon="mdi-chat"
+        text="Contact Us"
+        color="primary"
+        location="bottom end"
+        app
+        to="/contact"
+      />
     </VMain>
     <LazyStructureFooterView />
   </VApp>

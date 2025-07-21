@@ -1,2 +1,15 @@
+slug: patrick-kelly
 name: Patrick Kelly
-bio: A passionate software developer with a love for creating innovative solutions.
+bio: A passionate full-stack developer with 8+ years of experience building scalable web applications using Vue.js, Node.js, and modern development practices.
+avatar: /avatars/patrick-kelly.jpg
+email: patrick.kelly@example.com
+socialLinks:
+  - platform: github
+    url: https://github.com/patrickkelly
+    icon: mdi-github
+  - platform: linkedin
+    url: https://linkedin.com/in/patrickkelly
+    icon: mdi-linkedin
+  - platform: twitter
+    url: https://twitter.com/patrickkelly_dev
+    icon: mdi-twitter

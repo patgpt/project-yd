@@ -1,0 +1,7 @@
+slug: cms-integration
+title: Content Management
+description: Easy-to-use content management system that allows you to update your website without technical knowledge.
+icon: mdi-file-document-edit
+image: /images/cms.png
+featured: false
+order: 5
